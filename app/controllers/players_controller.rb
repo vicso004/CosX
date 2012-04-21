@@ -13,6 +13,7 @@ class PlayersController < ApplicationController
   # GET /players/1
   # GET /players/1.json
   def show
+    authenticate_user!
     @player = Player.find(params[:id])
 
     respond_to do |format|
