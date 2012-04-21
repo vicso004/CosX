@@ -7,10 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<% flash.each do |name, message| %>
+<% if name == :notice %>
+	<div id="flash" class="alert-message success fade in" data-alert="alert">
+		<a class="close" href="#">×</a>
+<% elsif name == :warning %>
+	<div id="flash" class="alert-message warning fade in" data-alert="alert">
+		<a class="close" href="#">×</a>
+<% elsif name == :alert %>
+	<div id="flash" class="alert-message error fade in" data-alert="alert">
+		<a class="close" href="#">×</a>
+<% else %>
+	<div id="flash">	
+<% end %>
+
+		<%= message %>
+	</div>
+<% end %>
+
+<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
 <p><% if user_signed_in? %>
+	<%= image_tag current_user.avatar_url, :alt =>"avatar" %>
+	<%= link_to "ändra", edit_user_registration_path %>
 	<%= link_to "Logga ut", destroy_user_session_path, :method => :delete%>
+
 <%else%>
 <%= link_to "Logga in", new_user_session_path %>
 <% end %>

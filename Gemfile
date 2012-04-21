@@ -10,6 +10,9 @@ gem 'cancan'
 gem 'therubyracer'
 gem 'rails3-generators'
 gem 'devise'
+
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
