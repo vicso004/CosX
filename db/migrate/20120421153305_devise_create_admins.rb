@@ -36,12 +36,14 @@ class DeviseCreateAdmins < ActiveRecord::Migration
       ## Token authenticatable
       # t.string :authentication_token
 
+      t.references :player
 
       t.timestamps
     end
 
     add_index :admins, :email,                :unique => true
     add_index :admins, :reset_password_token, :unique => true
+    add_index :admins, :player_id
     # add_index :admins, :confirmation_token,   :unique => true
     # add_index :admins, :unlock_token,         :unique => true
     # add_index :admins, :authentication_token, :unique => true
