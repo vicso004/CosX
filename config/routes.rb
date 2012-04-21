@@ -1,4 +1,12 @@
 CosX::Application.routes.draw do
+  resources :players
+
+  devise_for :users
+
+  resources :posts
+
+  root :to => 'posts#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +56,7 @@ CosX::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+
 
   # See how all your routes lay out with "rake routes"
 
