@@ -1,0 +1,9 @@
+<%= simple_form_for @carousel_item, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :url %>
+  <%= f.input :active %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                carousel_items_path, :class => 'btn' %>
+  </div>
+<% end %>

@@ -5,6 +5,8 @@ class PostsController < ApplicationController
     #@posts = Post.find(:all, :order =>"Created_at DESC", :limit => 2)
     #@posts = Post.find(:all, :order =>"Created_at DESC").page(params[:page]).per_page(5)
     @posts = Post.paginate(:page => params[:page]).order('id DESC').per_page(4)
+    #strängar med url till bilder, typ nått som admin får pilla med
+    @items = CarouselItem.where(:active => true)
   end
 
   # GET /posts/1

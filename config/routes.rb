@@ -1,4 +1,6 @@
 CosX::Application.routes.draw do
+  resources :carousel_items
+
   resources :seasons
 
   resources :goals

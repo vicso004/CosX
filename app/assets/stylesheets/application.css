@@ -5,6 +5,12 @@
  *= require_self
  *= require_tree . 
 */
+.item {
+  height: 100px;
+  halign: center;
+}
+
+
 .pagination {
   background: #f1f1f1;
   border: 1px solid #e5e5e5;
