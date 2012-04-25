@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   def index
     #@posts = Post.find(:all, :order =>"Created_at DESC", :limit => 2)
     #@posts = Post.find(:all, :order =>"Created_at DESC").page(params[:page]).per_page(5)
-    @posts = Post.paginate(:page => params[:page]).order('id DESC').per_page(2)
+    @posts = Post.paginate(:page => params[:page]).order('id DESC').per_page(4)
   end
 
   # GET /posts/1
