@@ -8,11 +8,6 @@
 </head>
 <body>
 	
-	
-	
-	
-	
-	
 	<div class="navbar">
 	  <div class="navbar-inner">
 	    <div class="container">
@@ -21,7 +16,7 @@
 			          <span class="icon-bar"></span>
 			          <span class="icon-bar"></span>
 			        </a>
-			        <a class="brand" href="/">Some Store</a>
+			        <a class="brand" href="/">CosX</a>
 			        <div class="nav-collapse">
 			          <ul class="nav">
 			            <li><%= link_to "Spelare", players_path %></li>
@@ -38,6 +33,7 @@
 					    <a href="#"
 					          class="dropdown-toggle"
 					          data-toggle="dropdown">
+					          <i class="icon-user icon-white"></i>
 					          Konto
 					          <b class="caret"></b>
 					    </a>
@@ -59,32 +55,35 @@
 	  </div>
 	</div>
 	
-	<!-- flash messages -->	
 
-	<% flash.each do |name, message| %>
-	<% if name == :notice %>
-		<div id="flash" class="alert-message success fade in" data-alert="alert">
-			<a class="close" href="#">×</a>
-	<% elsif name == :warning %>
-		<div id="flash" class="alert-message warning fade in" data-alert="alert">
-			<a class="close" href="#">×</a>
-	<% elsif name == :alert %>
-		<div id="flash" class="alert-message error fade in" data-alert="alert">
-			<a class="close" href="#">×</a>
-	<% else %>
-		<div id="flash">	
-	<% end %>
 
-			<%= message %>
-		</div>
-	<% end %>
-	
 	
 	<!-- main container -->
 	<div class="container-fluid">
 	  <div class="row-fluid">
 	    <div class="span10">
 	      <!--body content-->
+	      	<!-- flash messages -->		
+  <% flash.each do |name, msg| %>
+    <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+    	         <a class="close" data-dismiss="alert">&times;</a>
+      <%= msg  %>
+    </div>
+  <% end %>
+<!-- carousel -->
+<div id="myCarousel" class="carousel">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item"><%= image_tag "http://www-und.ida.liu.se/~chrvi915/lab5/content/bild1.jpg", :alt => "item1" %></div>
+    <div class="item"><%= image_tag "http://www-und.ida.liu.se/~chrvi915/lab5/content/bild2.jpg", :alt => "item2" %></div>
+    <div class="item"><%= image_tag "http://www-und.ida.liu.se/~chrvi915/lab5/content/bild3.jpg", :alt => "item3" %></div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+
+
 	<%= yield %>
 	    </div>
 	    <div class="span2">

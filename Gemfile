@@ -11,6 +11,7 @@ gem 'therubyracer'
 gem 'rails3-generators'
 gem 'devise'
 gem 'will_paginate'
+gem 'simple_form'
 
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'

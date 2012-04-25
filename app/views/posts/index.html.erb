@@ -1,11 +1,12 @@
 <%- model_class = Post.new.class -%>
 <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
-<div id="posts">
-	<%= render :partial => 'posts' %>
-</div>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_post_path,
             :class => 'btn btn-primary' %>
+
+<div id="posts">
+	<%= render :partial => 'posts' %>
+</div>
 
 <%= will_paginate @posts, :page_links => false, previous_label: h("<<"), next_label: h(">>") %>
