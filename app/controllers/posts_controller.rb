@@ -3,12 +3,8 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     #@posts = Post.find(:all, :order =>"Created_at DESC", :limit => 2)
-    last = params[:last].blank? ? Time.now + 1.second : Time.parse(params[:last])
-    		@posts = Post.feed(last)
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @posts }
-    end
+    #@posts = Post.find(:all, :order =>"Created_at DESC").page(params[:page]).per_page(5)
+    @posts = Post.paginate(:page => params[:page]).order('id DESC').per_page(2)
   end
 
   # GET /posts/1
@@ -16,10 +12,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @post }
-    end
+
   end
 
   # GET /posts/new
