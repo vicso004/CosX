@@ -19,7 +19,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th>bild</th>
       <th><%= model_class.human_attribute_name(:url) %></th>
       <th><%= model_class.human_attribute_name(:active) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
@@ -29,9 +29,12 @@
   <tbody>
     <% @carousel_items.each do |carousel_item| %>
       <tr>
-        <td><%= link_to carousel_item.id, carousel_item_path(carousel_item) %></td>
+        <td><%= image_tag(carousel_item.url, :class => "item") %></td>
         <td><%= carousel_item.url %></td>
-        <td><%= carousel_item.active %></td>
+        <td><%= link_to carousel_item.active.to_s,
+                      carousel_item_path(carousel_item),
+                      :action => :switch,
+                      :class => 'btn btn-mini btn-danger' %></td>
         <td><%=l carousel_item.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

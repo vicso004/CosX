@@ -80,4 +80,16 @@ class CarouselItemsController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  def switch
+    @carousel_item = CarouselItem.find(params[:id])
+    if @carousel_item.active 
+      @carousel_item.active =false
+    else
+      @carousel_item.active =true
+    end
+
+    redirect_to carousel_items_url    
+
+  end
 end

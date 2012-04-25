@@ -9,6 +9,9 @@
   height: 100px;
   halign: center;
 }
+#myCarousel{
+  width: 600px;
+}
 
 
 .pagination {
@@ -39,3 +42,5 @@
     color: black; }
     .pagination a:hover, .pagination a:focus {
       text-decoration: underline; }
+
+      

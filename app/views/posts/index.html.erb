@@ -1,18 +1,4 @@
- <!-- carousel -->
-<div id="myCarousel" class="carousel">
-<div class="carousel-inner">
-    <% @items.each_with_index do |item, index| %>
-      <div class="<% if index==0%>active <%end%>item">
-              <%= image_tag item.url %>
-          </div>
-      <% end %>
-  
-</div>
 
-  <!-- Carousel nav -->
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-</div>
 <!-- rest of posts -->
 <%- model_class = Post.new.class -%>
 <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
