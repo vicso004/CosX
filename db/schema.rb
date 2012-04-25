@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120421153305) do
+ActiveRecord::Schema.define(:version => 20120423135442) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -33,6 +33,39 @@ ActiveRecord::Schema.define(:version => 20120421153305) do
   add_index "admins", ["player_id"], :name => "index_admins_on_player_id"
   add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
 
+  create_table "goals", :force => true do |t|
+    t.integer  "match_id"
+    t.integer  "goaler_id"
+    t.integer  "assister_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "goals", ["assister_id"], :name => "index_goals_on_assister_id"
+  add_index "goals", ["goaler_id"], :name => "index_goals_on_goaler_id"
+  add_index "goals", ["match_id"], :name => "index_goals_on_match_id"
+
+  create_table "matches", :force => true do |t|
+    t.datetime "datetime"
+    t.string   "other_team"
+    t.integer  "score_other"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "season_id"
+  end
+
+  add_index "matches", ["season_id"], :name => "index_matches_on_season_id"
+
+  create_table "matches_players", :force => true do |t|
+    t.integer  "match_id"
+    t.integer  "player_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "matches_players", ["match_id"], :name => "index_matches_players_on_match_id"
+  add_index "matches_players", ["player_id"], :name => "index_matches_players_on_player_id"
+
   create_table "players", :force => true do |t|
     t.string   "name"
     t.string   "position"
@@ -46,6 +79,13 @@ ActiveRecord::Schema.define(:version => 20120421153305) do
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "seasons", :force => true do |t|
+    t.string   "period"
+    t.integer  "year"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

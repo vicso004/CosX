@@ -1,0 +1,29 @@
+<h1>Listing matches</h1>
+
+<table>
+  <tr>
+    <th>Datetime</th>
+    <th>Other team</th>
+    <th>Score other Team</th>
+    <th>Season</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @matches.each do |match| %>
+  <tr>
+    <td><%= match.datetime %></td>
+    <td><%= match.other_team %></td>
+    <td><%= match.score_other %></td>
+    <td><%= match.season.full_name %></td>
+    <td><%= link_to 'Show', match %></td>
+    <td><%= link_to 'Edit', edit_match_path(match) %></td>
+    <td><%= link_to 'Destroy', match, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Match', new_match_path %>

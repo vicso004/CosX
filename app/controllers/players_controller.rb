@@ -2,6 +2,7 @@ class PlayersController < ApplicationController
   # GET /players
   # GET /players.json
   def index
+    authenticate_user!
     @players = Player.all
 
     respond_to do |format|

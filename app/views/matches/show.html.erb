@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Datetime:</b>
+  <%= @match.datetime %>
+</p>
+
+<p>
+  <b>Other team:</b>
+  <%= @match.other_team %>
+</p>
+
+<p>
+  <b>Score other:</b>
+  <%= @match.score_other %>
+</p>
+
+<p>
+  <b>Season:</b>
+  <%= @match.season.full_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_match_path(@match) %> |
+<%= link_to 'Back', matches_path %>
+<%= link_to 'edit mål', edit_match_goals_path(@match)%>

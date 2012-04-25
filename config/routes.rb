@@ -1,4 +1,12 @@
 CosX::Application.routes.draw do
+  resources :seasons
+
+  resources :goals
+
+  resources :matches do
+    resources :goals
+  end
+
   devise_for :admins
 
   resources :players
@@ -8,6 +16,8 @@ CosX::Application.routes.draw do
   resources :posts
 
   root :to => 'posts#index'
+  
+#  match 'matches/:id/assign' => 'matches_players#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
