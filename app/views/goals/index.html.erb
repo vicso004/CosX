@@ -6,8 +6,7 @@
     <th>Goaler</th>
     <th>Assister</th>
     <th></th>
-    <th></th>
-    <th></th>
+
   </tr>
 
 <% @goals.each do |goal| %>
@@ -16,8 +15,7 @@
     <td><%= goal.goaler_id %></td>
     <td><%= goal.assister_id %></td>
     <td><%= link_to 'Show' %></td>
-    <td><%= link_to 'Edit', edit_match_goal_path(goal) %></td>
-    <td><%= link_to 'Destroy', goal, confirm: 'Are you sure?', method: :delete %></td>
+   
   </tr>
 <% end %>
 </table>

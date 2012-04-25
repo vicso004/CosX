@@ -2,8 +2,8 @@ class GoalsController < ApplicationController
   # GET /goals
   # GET /goals.json
   def index
-    @goals = Goal.where(:match_id => params[:match_id])
-
+    #@goals = Goal.where(:match_id => params[:match_id])
+    @goals =Match.find(params[:match_id]).goals
     respond_to do |format|
       format.html # index.html.erb
       
@@ -37,9 +37,9 @@ class GoalsController < ApplicationController
 
   # GET /goals/1/edit
   def edit
-    @goal = Goal.find(params[:id])
-    @match = Match.find(params[:match_id])
-    @players = @match.players
+    #@goal = Goal.find(params[:id])
+    #@match = Match.find(params[:match_id])
+    #@players = @match.players
   end
 
   # POST /goals
