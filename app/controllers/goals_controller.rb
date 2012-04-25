@@ -37,7 +37,7 @@ class GoalsController < ApplicationController
 
   # GET /goals/1/edit
   def edit
-    #@goal = Goal.find(params[:id])
+    @goal = Goal.find(params[:id])
     #@match = Match.find(params[:match_id])
     #@players = @match.players
   end
