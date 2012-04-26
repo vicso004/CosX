@@ -1,0 +1,49 @@
+<!--
+###########################################################
+#  Code written by PUMBA
+#  Author:
+#  		  Support team (scaffold)
+#  Branch: development
+#  Module: Global
+#  Class: User
+#  Origin Date: 2011-10-25
+#  Last Modified: 
+#         2011-11-11 : Change the flash message into bootstrapped flash message
+#  Description:
+#        Layout of popup pages without the header
+#        
+#
+#
+#
+###########################################################
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PUMBA ERP Project</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<% flash.each do |name, message| %>
+	<% if name == :notice %>
+		<div id="flash_<%= name %>" class="alert-message success" data-alert="alert">
+			<a class="close" href="#">×</a>
+	<% elsif name == :warning %>
+		<div id="flash_<%= name %>" class="alert-message warning" data-alert="alert">
+			<a class="close" href="#">×</a>
+	<% elsif name == :error %>
+		<div id="flash_<%= name %>" class="alert-message error" data-alert="alert">
+			<a class="close" href="#">×</a>
+	<% else %>
+		<div id="flash_<%= name %>">	
+	<% end %>
+
+			<%= message %>
+		</div>
+	<% end %>
+<%= yield %>
+</body>
+</html>

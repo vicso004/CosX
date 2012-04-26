@@ -31,10 +31,11 @@
       <tr>
         <td><%= image_tag(carousel_item.url, :class => "item") %></td>
         <td><%= carousel_item.url %></td>
-        <td><%= link_to carousel_item.active.to_s,
-                      carousel_item_path(carousel_item),
+        <td><%= link_to switcher_name(carousel_item),
+                      switch_path(carousel_item),
                       :action => :switch,
-                      :class => 'btn btn-mini btn-danger' %></td>
+                      :method => :put,
+                      :class =>  switcher_style(carousel_item) %></td>
         <td><%=l carousel_item.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

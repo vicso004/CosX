@@ -65,10 +65,13 @@
 	      <!--body content-->
 	      	<!-- flash messages -->		
   <% flash.each do |name, msg| %>
-    <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+    <div class="alert alert-<%= name == :notice ? "success" : "error" %> fade in">
     	         <a class="close" data-dismiss="alert">&times;</a>
       <%= msg  %>
     </div>
+    
+
+
   <% end %>
 <!-- carousel -->
 
