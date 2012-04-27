@@ -1,5 +1,8 @@
 <%= simple_form_for @match, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :datetime %>
+<div>
+  <%= f.label :datetime %>
+  <%= f.text_field :datetime %>
+</div>
   <%= f.input :other_team %>
   <%= f.input :score_other %>
   <%= f.input :season_id %>

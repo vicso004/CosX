@@ -8,21 +8,58 @@ cursor_positions:
     :timestamp: 2012-04-25 17:57:39 +02:00
     :selection_offset: 580
     :block_selection_mode: false
-  - :path: app/views/layouts/application.html.erb
-    :cursor_offset: 0
-    :timestamp: 2012-04-26 20:29:07 +02:00
-  - :path: app/views/posts/_posts.html.erb
-    :cursor_offset: 51
-    :timestamp: 2012-04-26 20:23:53 +02:00
-  - :path: app/views/posts/_form.html.erb
-    :cursor_offset: 4
-    :timestamp: 2012-04-25 18:59:52 +02:00
-    :selection_offset: 15
-    :block_selection_mode: false
   - :path: app/models/post.rb
     :cursor_offset: 124
     :timestamp: 2012-04-27 09:41:11 +02:00
   - :path: spec/views/posts/index.html.erb_spec.rb
     :cursor_offset: 0
     :timestamp: 2012-04-26 21:54:25 +02:00
+  - :path: db/migrate/20120423125813_create_matches.rb
+    :cursor_offset: 20
+    :timestamp: 2012-04-25 17:57:39 +02:00
+    :selection_offset: 0
+    :block_selection_mode: false
+  - :path: script/rails
+    :cursor_offset: 0
+    :timestamp: 2012-04-25 17:57:39 +02:00
+  - :path: app/models/carousel_item.rb
+    :cursor_offset: 40
+    :timestamp: 2012-04-27 10:40:39 +02:00
+  - :path: app/views/posts/_form.html.erb
+    :cursor_offset: 397
+    :timestamp: 2012-04-26 21:54:25 +02:00
+  - :path: app/views/posts/_posts.html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-04-26 21:54:25 +02:00
+  - :path: db/migrate/20120425172229_create_carousel_items.rb
+    :cursor_offset: 35
+    :timestamp: 2012-04-26 21:54:25 +02:00
+  - :path: app/views/matches/new.js.erb
+    :cursor_offset: 0
+    :timestamp: 2012-04-27 10:54:56 +02:00
+  - :path: app/assets/javascripts/matches.js.coffee
+    :cursor_offset: 229
+    :timestamp: 2012-04-27 11:25:00 +02:00
+  - :path: app/assets/javascripts/posts.js.coffee
+    :cursor_offset: 229
+    :timestamp: 2012-04-25 20:27:21 +02:00
+    :selection_offset: 238
+    :block_selection_mode: false
+  - :path: app/views/posts/index.js.erb
+    :cursor_offset: 0
+    :timestamp: 2012-04-25 19:50:28 +02:00
+  - :path: app/views/matches/_form.js.erb
+    :cursor_offset: 55
+    :timestamp: 2012-04-27 11:20:00 +02:00
+  - :path: app/views/layouts/application.html.erb
+    :cursor_offset: 483
+    :timestamp: 2012-04-27 11:20:03 +02:00
+  - :path: app/assets/javascripts/application.js
+    :cursor_offset: 514
+    :timestamp: 2012-04-27 11:17:30 +02:00
+  - :path: public/javascripts/application.js
+    :cursor_offset: 0
+    :timestamp: 2012-04-27 11:22:18 +02:00
+    :selection_offset: 61
+    :block_selection_mode: false
 files_to_retain: 0
