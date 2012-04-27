@@ -4,7 +4,8 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:datetime) %></th>
+      <th><%= model_class.human_attribute_name(:datum) %></th>
+      <th><%= model_class.human_attribute_name(:tid) %></th>
       <th><%= model_class.human_attribute_name(:other_team) %></th>
       <th><%= model_class.human_attribute_name(:score_other) %></th>
       <th><%= model_class.human_attribute_name(:season_id) %></th>
@@ -16,10 +17,11 @@
     <% @matches.each do |match| %>
       <tr>
         <td><%= link_to match.id, match_path(match) %></td>
-        <td><%= match.datetime %></td>
+        <td><%= match.datum %></td>
+        <td><%= match.tid %></td>
         <td><%= match.other_team %></td>
         <td><%= match.score_other %></td>
-        <td><%= match.season_id %></td>
+        <td><%= match.season.full_name %></td>
         <td><%=l match.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

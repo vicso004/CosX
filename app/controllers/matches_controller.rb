@@ -41,8 +41,12 @@ class MatchesController < ApplicationController
   # POST /matches
   # POST /matches.json
   def create
+    season = params[:match][:season].split
+    #season = season.split
+    params[:match][:season] = Season.where(:period => season.first, :year => season.last.to_i).first
     @match = Match.new(params[:match])
-    @seasons = Season.all
+    #@seasons = Season.all
+    
 
     respond_to do |format|
       if @match.save
@@ -59,7 +63,11 @@ class MatchesController < ApplicationController
   # PUT /matches/1.json
   def update
     @match = Match.find(params[:id])
-    @seasons = Season.all
+    season = params[:match][:season].split
+    #season = season.split
+    params[:match][:season] = Season.where(:period => season.first, :year => season.last.to_i).first
+
+    
     respond_to do |format|
       if @match.update_attributes(params[:match])
         format.html { redirect_to @match, notice: 'Match was successfully updated.' }

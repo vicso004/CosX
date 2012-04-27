@@ -1,4 +1,4 @@
-1335518867
+1335534531
 Admin	/home/christopher/workspace/tddd27/CosX/app/models/admin.rb	class Admin 
 Application	/home/christopher/workspace/tddd27/CosX/config/application.rb	  class Application 
 ApplicationController	/home/christopher/workspace/tddd27/CosX/app/controllers/application_controller.rb	class ApplicationController 
@@ -66,6 +66,7 @@ MatchesController	/home/christopher/workspace/tddd27/CosX/app/controllers/matche
 MatchesHelper	/home/christopher/workspace/tddd27/CosX/app/helpers/matches_helper.rb	module MatchesHelper
 MatchesPlayersController	/home/christopher/workspace/tddd27/CosX/app/controllers/matches_players_controller.rb	class MatchesPlayersController 
 MatchesPlayersControllerHelper	/home/christopher/workspace/tddd27/CosX/app/helpers/matches_players_controller_helper.rb	module MatchesPlayersControllerHelper
+ModifyMatchDatetime	/home/christopher/workspace/tddd27/CosX/db/migrate/20120427092937_modify_match_datetime.rb	class ModifyMatchDatetime 
 OmniauthCallbacksController	/home/christopher/workspace/tddd27/CosX/app/controllers/users/omniauth_callbacks_controller.rb	class Users::OmniauthCallbacksController 
 POST create	/home/christopher/workspace/tddd27/CosX/spec/controllers/matches_controller_spec.rb	describe "POST create" do
 POST create	/home/christopher/workspace/tddd27/CosX/spec/controllers/players_controller_spec.rb	describe "POST create" do
@@ -91,6 +92,7 @@ Season	/home/christopher/workspace/tddd27/CosX/app/models/season.rb	class Season
 Seasons	/home/christopher/workspace/tddd27/CosX/spec/requests/seasons_spec.rb	describe "Seasons" do
 SeasonsController	/home/christopher/workspace/tddd27/CosX/app/controllers/seasons_controller.rb	class SeasonsController 
 SeasonsHelper	/home/christopher/workspace/tddd27/CosX/app/helpers/seasons_helper.rb	module SeasonsHelper
+TimeInput	/home/christopher/workspace/tddd27/CosX/app/inputs/time_input.rb	class TimeInput 
 User	/home/christopher/workspace/tddd27/CosX/app/models/user.rb	class User 
 assigns a new carousel_item as @carousel_item	/home/christopher/workspace/tddd27/CosX/spec/controllers/carousel_items_controller_spec.rb	it "assigns a new carousel_item as @carousel_item" do
 assigns a new goal as @goal	/home/christopher/workspace/tddd27/CosX/spec/controllers/goals_controller_spec.rb	it "assigns a new goal as @goal" do
@@ -154,6 +156,7 @@ change	/home/christopher/workspace/tddd27/CosX/db/migrate/20120421153305_devise_
 change	/home/christopher/workspace/tddd27/CosX/db/migrate/20120423125813_create_matches.rb	  def change
 change	/home/christopher/workspace/tddd27/CosX/db/migrate/20120425172853_change_carousel_items.rb	  def change
 change	/home/christopher/workspace/tddd27/CosX/db/migrate/20120425172229_create_carousel_items.rb	  def change
+change	/home/christopher/workspace/tddd27/CosX/db/migrate/20120427092937_modify_match_datetime.rb	  def change
 concats two strings with spaces	/home/christopher/workspace/tddd27/CosX/spec/helpers/players_helper_spec.rb	it "concats two strings with spaces" do
 concats two strings with spaces	/home/christopher/workspace/tddd27/CosX/spec/helpers/goals_helper_spec.rb	it "concats two strings with spaces" do
 concats two strings with spaces	/home/christopher/workspace/tddd27/CosX/spec/helpers/posts_helper_spec.rb	it "concats two strings with spaces" do
@@ -162,12 +165,12 @@ concats two strings with spaces	/home/christopher/workspace/tddd27/CosX/spec/hel
 concats two strings with spaces	/home/christopher/workspace/tddd27/CosX/spec/helpers/matches_players_controller_helper_spec.rb	it "concats two strings with spaces" do
 concats two strings with spaces	/home/christopher/workspace/tddd27/CosX/spec/helpers/carousel_items_helper_spec.rb	it "concats two strings with spaces" do
 create	/home/christopher/workspace/tddd27/CosX/app/controllers/matches_players_controller.rb	  def create
-create	/home/christopher/workspace/tddd27/CosX/app/controllers/matches_controller.rb	  def create
 create	/home/christopher/workspace/tddd27/CosX/app/controllers/players_controller.rb	  def create
 create	/home/christopher/workspace/tddd27/CosX/app/controllers/seasons_controller.rb	  def create
 create	/home/christopher/workspace/tddd27/CosX/app/controllers/goals_controller.rb	  def create
 create	/home/christopher/workspace/tddd27/CosX/app/controllers/carousel_items_controller.rb	  def create
 create	/home/christopher/workspace/tddd27/CosX/app/controllers/posts_controller.rb	  def create
+create	/home/christopher/workspace/tddd27/CosX/app/controllers/matches_controller.rb	  def create
 creates a new CarouselItem	/home/christopher/workspace/tddd27/CosX/spec/controllers/carousel_items_controller_spec.rb	it "creates a new CarouselItem" do
 creates a new Goal	/home/christopher/workspace/tddd27/CosX/spec/controllers/goals_controller_spec.rb	it "creates a new Goal" do
 creates a new Match	/home/christopher/workspace/tddd27/CosX/spec/controllers/matches_controller_spec.rb	it "creates a new Match" do
@@ -175,12 +178,12 @@ creates a new Player	/home/christopher/workspace/tddd27/CosX/spec/controllers/pl
 creates a new Post	/home/christopher/workspace/tddd27/CosX/spec/controllers/posts_controller_spec.rb	it "creates a new Post" do
 creates a new Season	/home/christopher/workspace/tddd27/CosX/spec/controllers/seasons_controller_spec.rb	it "creates a new Season" do
 destroy	/home/christopher/workspace/tddd27/CosX/app/controllers/matches_players_controller.rb	  def destroy
-destroy	/home/christopher/workspace/tddd27/CosX/app/controllers/matches_controller.rb	  def destroy
 destroy	/home/christopher/workspace/tddd27/CosX/app/controllers/players_controller.rb	  def destroy
 destroy	/home/christopher/workspace/tddd27/CosX/app/controllers/seasons_controller.rb	  def destroy
 destroy	/home/christopher/workspace/tddd27/CosX/app/controllers/goals_controller.rb	  def destroy
 destroy	/home/christopher/workspace/tddd27/CosX/app/controllers/carousel_items_controller.rb	  def destroy
 destroy	/home/christopher/workspace/tddd27/CosX/app/controllers/posts_controller.rb	  def destroy
+destroy	/home/christopher/workspace/tddd27/CosX/app/controllers/matches_controller.rb	  def destroy
 destroys the requested carousel_item	/home/christopher/workspace/tddd27/CosX/spec/controllers/carousel_items_controller_spec.rb	it "destroys the requested carousel_item" do
 destroys the requested goal	/home/christopher/workspace/tddd27/CosX/spec/controllers/goals_controller_spec.rb	it "destroys the requested goal" do
 destroys the requested match	/home/christopher/workspace/tddd27/CosX/spec/controllers/matches_controller_spec.rb	it "destroys the requested match" do
@@ -189,12 +192,12 @@ destroys the requested post	/home/christopher/workspace/tddd27/CosX/spec/control
 destroys the requested season	/home/christopher/workspace/tddd27/CosX/spec/controllers/seasons_controller_spec.rb	it "destroys the requested season" do
 down	/home/christopher/workspace/tddd27/CosX/db/migrate/20120421111632_change_players.rb	  def down
 down	/home/christopher/workspace/tddd27/CosX/db/migrate/20120423131601_change_matches.rb	  def down
-edit	/home/christopher/workspace/tddd27/CosX/app/controllers/matches_controller.rb	  def edit
 edit	/home/christopher/workspace/tddd27/CosX/app/controllers/players_controller.rb	  def edit
 edit	/home/christopher/workspace/tddd27/CosX/app/controllers/seasons_controller.rb	  def edit
 edit	/home/christopher/workspace/tddd27/CosX/app/controllers/goals_controller.rb	  def edit
 edit	/home/christopher/workspace/tddd27/CosX/app/controllers/carousel_items_controller.rb	  def edit
 edit	/home/christopher/workspace/tddd27/CosX/app/controllers/posts_controller.rb	  def edit
+edit	/home/christopher/workspace/tddd27/CosX/app/controllers/matches_controller.rb	  def edit
 facebook	/home/christopher/workspace/tddd27/CosX/app/controllers/users/omniauth_callbacks_controller.rb	  def facebook
 find_for_facebook_oauth	/home/christopher/workspace/tddd27/CosX/app/models/user.rb	  def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
 find_or_create_by	/home/christopher/workspace/tddd27/CosX/app/models/player.rb		def self.find_or_create_by(name)
@@ -203,23 +206,24 @@ goals/edit	/home/christopher/workspace/tddd27/CosX/spec/views/goals/edit.html.er
 goals/index	/home/christopher/workspace/tddd27/CosX/spec/views/goals/index.html.erb_spec.rb	describe "goals/index" do
 goals/new	/home/christopher/workspace/tddd27/CosX/spec/views/goals/new.html.erb_spec.rb	describe "goals/new" do
 goals/show	/home/christopher/workspace/tddd27/CosX/spec/views/goals/show.html.erb_spec.rb	describe "goals/show" do
-index	/home/christopher/workspace/tddd27/CosX/app/controllers/matches_controller.rb	  def index
 index	/home/christopher/workspace/tddd27/CosX/app/controllers/players_controller.rb	  def index
 index	/home/christopher/workspace/tddd27/CosX/app/controllers/seasons_controller.rb	  def index
 index	/home/christopher/workspace/tddd27/CosX/app/controllers/goals_controller.rb	  def index
 index	/home/christopher/workspace/tddd27/CosX/app/controllers/carousel_items_controller.rb	  def index
 index	/home/christopher/workspace/tddd27/CosX/app/controllers/posts_controller.rb	  def index
+index	/home/christopher/workspace/tddd27/CosX/app/controllers/matches_controller.rb	  def index
+input	/home/christopher/workspace/tddd27/CosX/app/inputs/time_input.rb	  def input
 matches/edit	/home/christopher/workspace/tddd27/CosX/spec/views/matches/edit.html.erb_spec.rb	describe "matches/edit" do
 matches/index	/home/christopher/workspace/tddd27/CosX/spec/views/matches/index.html.erb_spec.rb	describe "matches/index" do
 matches/new	/home/christopher/workspace/tddd27/CosX/spec/views/matches/new.html.erb_spec.rb	describe "matches/new" do
 matches/show	/home/christopher/workspace/tddd27/CosX/spec/views/matches/show.html.erb_spec.rb	describe "matches/show" do
 new	/home/christopher/workspace/tddd27/CosX/app/controllers/matches_players_controller.rb	  def new
-new	/home/christopher/workspace/tddd27/CosX/app/controllers/matches_controller.rb	  def new
 new	/home/christopher/workspace/tddd27/CosX/app/controllers/players_controller.rb	  def new
 new	/home/christopher/workspace/tddd27/CosX/app/controllers/seasons_controller.rb	  def new
 new	/home/christopher/workspace/tddd27/CosX/app/controllers/goals_controller.rb	  def new
 new	/home/christopher/workspace/tddd27/CosX/app/controllers/carousel_items_controller.rb	  def new
 new	/home/christopher/workspace/tddd27/CosX/app/controllers/posts_controller.rb	  def new
+new	/home/christopher/workspace/tddd27/CosX/app/controllers/matches_controller.rb	  def new
 new_with_session	/home/christopher/workspace/tddd27/CosX/app/models/user.rb	  def self.new_with_session(params, session)
 players/edit	/home/christopher/workspace/tddd27/CosX/spec/views/players/edit.html.erb_spec.rb	describe "players/edit" do
 players/index	/home/christopher/workspace/tddd27/CosX/spec/views/players/index.html.erb_spec.rb	describe "players/index" do
@@ -331,16 +335,17 @@ routing	/home/christopher/workspace/tddd27/CosX/spec/routing/posts_routing_spec.
 routing	/home/christopher/workspace/tddd27/CosX/spec/routing/seasons_routing_spec.rb	describe "routing" do
 routing	/home/christopher/workspace/tddd27/CosX/spec/routing/goals_routing_spec.rb	describe "routing" do
 routing	/home/christopher/workspace/tddd27/CosX/spec/routing/carousel_items_routing_spec.rb	describe "routing" do
+season_collection	/home/christopher/workspace/tddd27/CosX/app/helpers/matches_helper.rb	  def season_collection
 seasons/edit	/home/christopher/workspace/tddd27/CosX/spec/views/seasons/edit.html.erb_spec.rb	describe "seasons/edit" do
 seasons/index	/home/christopher/workspace/tddd27/CosX/spec/views/seasons/index.html.erb_spec.rb	describe "seasons/index" do
 seasons/new	/home/christopher/workspace/tddd27/CosX/spec/views/seasons/new.html.erb_spec.rb	describe "seasons/new" do
 seasons/show	/home/christopher/workspace/tddd27/CosX/spec/views/seasons/show.html.erb_spec.rb	describe "seasons/show" do
-show	/home/christopher/workspace/tddd27/CosX/app/controllers/matches_controller.rb	  def show
 show	/home/christopher/workspace/tddd27/CosX/app/controllers/players_controller.rb	  def show
 show	/home/christopher/workspace/tddd27/CosX/app/controllers/seasons_controller.rb	  def show
 show	/home/christopher/workspace/tddd27/CosX/app/controllers/goals_controller.rb	  def show
 show	/home/christopher/workspace/tddd27/CosX/app/controllers/carousel_items_controller.rb	  def show
 show	/home/christopher/workspace/tddd27/CosX/app/controllers/posts_controller.rb	  def show
+show	/home/christopher/workspace/tddd27/CosX/app/controllers/matches_controller.rb	  def show
 string concat	/home/christopher/workspace/tddd27/CosX/spec/helpers/players_helper_spec.rb	describe "string concat" do
 string concat	/home/christopher/workspace/tddd27/CosX/spec/helpers/goals_helper_spec.rb	describe "string concat" do
 string concat	/home/christopher/workspace/tddd27/CosX/spec/helpers/posts_helper_spec.rb	describe "string concat" do
@@ -354,12 +359,12 @@ switcher_name	/home/christopher/workspace/tddd27/CosX/app/helpers/carousel_items
 switcher_style	/home/christopher/workspace/tddd27/CosX/app/helpers/carousel_items_helper.rb	 	def switcher_style(item)
 up	/home/christopher/workspace/tddd27/CosX/db/migrate/20120421111632_change_players.rb	  def up
 up	/home/christopher/workspace/tddd27/CosX/db/migrate/20120423131601_change_matches.rb	  def up
-update	/home/christopher/workspace/tddd27/CosX/app/controllers/matches_controller.rb	  def update
 update	/home/christopher/workspace/tddd27/CosX/app/controllers/players_controller.rb	  def update
 update	/home/christopher/workspace/tddd27/CosX/app/controllers/seasons_controller.rb	  def update
 update	/home/christopher/workspace/tddd27/CosX/app/controllers/goals_controller.rb	  def update
 update	/home/christopher/workspace/tddd27/CosX/app/controllers/carousel_items_controller.rb	  def update
 update	/home/christopher/workspace/tddd27/CosX/app/controllers/posts_controller.rb	  def update
+update	/home/christopher/workspace/tddd27/CosX/app/controllers/matches_controller.rb	  def update
 updates the requested carousel_item	/home/christopher/workspace/tddd27/CosX/spec/controllers/carousel_items_controller_spec.rb	it "updates the requested carousel_item" do
 updates the requested goal	/home/christopher/workspace/tddd27/CosX/spec/controllers/goals_controller_spec.rb	it "updates the requested goal" do
 updates the requested match	/home/christopher/workspace/tddd27/CosX/spec/controllers/matches_controller_spec.rb	it "updates the requested match" do

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120425172853) do
+ActiveRecord::Schema.define(:version => 20120427092937) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -53,12 +53,13 @@ ActiveRecord::Schema.define(:version => 20120425172853) do
   add_index "goals", ["match_id"], :name => "index_goals_on_match_id"
 
   create_table "matches", :force => true do |t|
-    t.datetime "datetime"
     t.string   "other_team"
     t.integer  "score_other"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "season_id"
+    t.date     "datum"
+    t.time     "tid"
   end
 
   add_index "matches", ["season_id"], :name => "index_matches_on_season_id"
