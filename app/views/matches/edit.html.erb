@@ -1,6 +1,4 @@
-<h1>Editing match</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @match %> |
-<%= link_to 'Back', matches_path %>
+<%- model_class = @match.class -%>
+<h1><%=t '.title', :default => t('helpers.titles.edit', :model => model_class.model_name.human,
+                                 :default => "Edit #{model_class.model_name.human}") %></h1>
+<%= render :partial => 'form' %>

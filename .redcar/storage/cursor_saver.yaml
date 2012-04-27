@@ -1,0 +1,28 @@
+--- 
+cursor_positions: 
+  - :path: app/views/posts/index.html.erb
+    :cursor_offset: 426
+    :timestamp: 2012-04-25 20:30:07 +02:00
+  - :path: config/application.rb
+    :cursor_offset: 600
+    :timestamp: 2012-04-25 17:57:39 +02:00
+    :selection_offset: 580
+    :block_selection_mode: false
+  - :path: app/views/layouts/application.html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-04-26 20:29:07 +02:00
+  - :path: app/views/posts/_posts.html.erb
+    :cursor_offset: 51
+    :timestamp: 2012-04-26 20:23:53 +02:00
+  - :path: app/views/posts/_form.html.erb
+    :cursor_offset: 4
+    :timestamp: 2012-04-25 18:59:52 +02:00
+    :selection_offset: 15
+    :block_selection_mode: false
+  - :path: app/models/post.rb
+    :cursor_offset: 124
+    :timestamp: 2012-04-27 09:41:11 +02:00
+  - :path: spec/views/posts/index.html.erb_spec.rb
+    :cursor_offset: 0
+    :timestamp: 2012-04-26 21:54:25 +02:00
+files_to_retain: 0

@@ -1,26 +1,31 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = @match.class -%>
+<h1><%=t '.title', :default => model_class.model_name.human %></h1>
 
 <p>
-  <b>Datetime:</b>
+  <strong><%= model_class.human_attribute_name(:datetime) %>:</strong><br>
   <%= @match.datetime %>
 </p>
-
 <p>
-  <b>Other team:</b>
+  <strong><%= model_class.human_attribute_name(:other_team) %>:</strong><br>
   <%= @match.other_team %>
 </p>
-
 <p>
-  <b>Score other:</b>
+  <strong><%= model_class.human_attribute_name(:score_other) %>:</strong><br>
   <%= @match.score_other %>
 </p>
-
 <p>
-  <b>Season:</b>
-  <%= @match.season.full_name %>
+  <strong><%= model_class.human_attribute_name(:season_id) %>:</strong><br>
+  <%= @match.season_id %>
 </p>
 
-
-<%= link_to 'Edit', edit_match_path(@match) %> |
-<%= link_to 'Back', matches_path %>
-<%= link_to 'edit mål', edit_match_goals_path(@match)%>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              matches_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_match_path(@match), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              match_path(@match),
+              :method => 'delete',
+              :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+              :class => 'btn btn-danger' %>
+</div>
