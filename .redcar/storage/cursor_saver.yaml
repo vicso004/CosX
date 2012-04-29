@@ -32,11 +32,6 @@ cursor_positions:
   - :path: app/views/matches/new.js.erb
     :cursor_offset: 0
     :timestamp: 2012-04-27 10:54:56 +02:00
-  - :path: app/assets/javascripts/posts.js.coffee
-    :cursor_offset: 229
-    :timestamp: 2012-04-25 20:27:21 +02:00
-    :selection_offset: 238
-    :block_selection_mode: false
   - :path: app/views/posts/index.js.erb
     :cursor_offset: 0
     :timestamp: 2012-04-25 19:50:28 +02:00
@@ -46,9 +41,6 @@ cursor_positions:
   - :path: app/views/layouts/application.html.erb
     :cursor_offset: 483
     :timestamp: 2012-04-27 11:20:03 +02:00
-  - :path: app/assets/javascripts/application.js
-    :cursor_offset: 514
-    :timestamp: 2012-04-27 11:17:30 +02:00
   - :path: public/javascripts/application.js
     :cursor_offset: 0
     :timestamp: 2012-04-27 11:22:18 +02:00
@@ -67,9 +59,6 @@ cursor_positions:
   - :path: db/migrate/20120427092937_modify_match_datetime.rb
     :cursor_offset: 183
     :timestamp: 2012-04-27 11:36:23 +02:00
-  - :path: app/assets/javascripts/matches.js.coffee
-    :cursor_offset: 256
-    :timestamp: 2012-04-27 11:40:53 +02:00
   - :path: app/views/goals/_form.html.erb
     :cursor_offset: 0
     :timestamp: 2012-04-25 17:57:39 +02:00
@@ -111,4 +100,36 @@ cursor_positions:
   - :path: app/assets/stylesheets/matches.css.scss
     :cursor_offset: 2
     :timestamp: 2012-04-27 14:39:53 +02:00
+  - :path: app/helpers/application_helper.rb
+    :cursor_offset: 0
+    :timestamp: 2012-04-25 17:57:39 +02:00
+  - :path: app/assets/javascripts/seasons.js.coffee
+    :cursor_offset: 0
+    :timestamp: 2012-04-25 17:57:39 +02:00
+  - :path: app/assets/javascripts/posts.js.coffee
+    :cursor_offset: 229
+    :timestamp: 2012-04-25 20:27:21 +02:00
+    :selection_offset: 238
+    :block_selection_mode: false
+  - :path: app/assets/javascripts/players.js.coffee
+    :cursor_offset: 0
+    :timestamp: 2012-04-26 16:25:35 +02:00
+  - :path: app/assets/javascripts/matches.js.coffee
+    :cursor_offset: 0
+    :timestamp: 2012-04-27 15:48:25 +02:00
+  - :path: app/assets/javascripts/matches_players_controller.js.coffee
+    :cursor_offset: 0
+    :timestamp: 2012-04-25 17:57:39 +02:00
+  - :path: app/assets/javascripts/goals.js.coffee
+    :cursor_offset: 0
+    :timestamp: 2012-04-25 17:57:39 +02:00
+  - :path: app/assets/javascripts/carousel_items.js.coffee
+    :cursor_offset: 0
+    :timestamp: 2012-04-26 21:54:25 +02:00
+  - :path: app/assets/javascripts/application.js
+    :cursor_offset: 466
+    :timestamp: 2012-04-29 11:54:25 +02:00
+  - :path: app/assets/javascripts/bootstrap.js.coffee
+    :cursor_offset: 0
+    :timestamp: 2012-04-25 19:02:36 +02:00
 files_to_retain: 0

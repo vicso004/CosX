@@ -46,10 +46,12 @@
 						
 							    <%= image_tag current_user.avatar_url, :alt =>"avatar" %>
 							<li class="divider"></li>
+              
 							 	<li><%= link_to "Logga ut", destroy_user_session_path, :method => :delete%></li>
 							  <% else %>
 							   <li> <%= link_to "Logga in", user_omniauth_authorize_path(:facebook) %></li>
-							    <% end %>
+                <li>hejsan</li>
+						    <% end %>
 					    </ul>
 					  </li>
 					</ul>
