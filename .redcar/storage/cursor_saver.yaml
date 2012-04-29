@@ -126,10 +126,10 @@ cursor_positions:
   - :path: app/assets/javascripts/carousel_items.js.coffee
     :cursor_offset: 0
     :timestamp: 2012-04-26 21:54:25 +02:00
-  - :path: app/assets/javascripts/application.js
-    :cursor_offset: 466
-    :timestamp: 2012-04-29 11:54:25 +02:00
   - :path: app/assets/javascripts/bootstrap.js.coffee
     :cursor_offset: 0
     :timestamp: 2012-04-25 19:02:36 +02:00
+  - :path: app/assets/javascripts/application.js
+    :cursor_offset: 0
+    :timestamp: 2012-04-29 12:02:59 +02:00
 files_to_retain: 0
