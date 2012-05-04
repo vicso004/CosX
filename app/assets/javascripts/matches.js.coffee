@@ -3,9 +3,15 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 jQuery ->
   $('#match_datum').datepicker({
-   dateFormat: 'yy-mm-dd' }
-  );
-  $('#match_datum').click;
+   dateFormat: 'yy-mm-dd',
+   firstDay: 1, #Börja på måndag
+  monthNames: ['Januari','Februari','Mars','April','Maj','Juni',
+			'Juli','Augusti','September','Oktober','November','December'],
+  dayNamesMin: ['Sö','Må','Ti','On','To','Fr','Lö'],
+  prevText: '<<',
+  nextText: '>>'
+  });
+
   
   
   

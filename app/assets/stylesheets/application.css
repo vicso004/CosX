@@ -12,6 +12,9 @@
 #myCarousel{
   width: 600px;
 }
+.ui-icon {
+  text-indent: 0px;
+}
 
 
 .pagination {
