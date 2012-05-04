@@ -8,6 +8,8 @@ CosX::Application.routes.draw do
   resources :matches do
     resources :goals
   end
+  
+  resources :matches_players
 
   devise_for :admins
 

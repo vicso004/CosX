@@ -5,7 +5,7 @@
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:datum) %></th>
-      <th><%= model_class.human_attribute_name(:tid) %></th>
+      <th>Vår poäng</th>
       <th><%= model_class.human_attribute_name(:other_team) %></th>
       <th><%= model_class.human_attribute_name(:score_other) %></th>
       <th><%= model_class.human_attribute_name(:season_id) %></th>
@@ -18,7 +18,7 @@
       <tr>
         <td><%= link_to match.id, match_path(match) %></td>
         <td><%= match.datum %></td>
-        <td><%= match.tid %></td>
+        <td><%= match.goals.length %></td>
         <td><%= match.other_team %></td>
         <td><%= match.score_other %></td>
         <td><%= match.season.full_name %></td>
@@ -26,6 +26,8 @@
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_match_path(match), :class => 'btn btn-mini' %>
+          <%= link_to "Lägg till mål",
+                      new_match_goal_path(match), :class => 'btn btn-mini' %>                      
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       match_path(match),
                       :method => :delete,

@@ -79,9 +79,6 @@ cursor_positions:
   - :path: app/controllers/matches_controller.rb
     :cursor_offset: 561
     :timestamp: 2012-04-25 17:57:39 +02:00
-  - :path: app/assets/stylesheets/matches.css.scss
-    :cursor_offset: 2
-    :timestamp: 2012-04-27 14:39:53 +02:00
   - :path: app/helpers/application_helper.rb
     :cursor_offset: 0
     :timestamp: 2012-04-25 17:57:39 +02:00
@@ -106,20 +103,11 @@ cursor_positions:
   - :path: app/views/posts/index.js.erb
     :cursor_offset: 0
     :timestamp: 2012-04-25 19:50:28 +02:00
-  - :path: app/assets/javascripts/matches.js.coffee
-    :cursor_offset: 0
-    :timestamp: 2012-04-29 12:02:59 +02:00
   - :path: app/assets/javascripts/posts.js.coffee
     :cursor_offset: 229
     :timestamp: 2012-04-25 20:27:21 +02:00
     :selection_offset: 238
     :block_selection_mode: false
-  - :path: app/views/posts/_form.html.erb
-    :cursor_offset: 397
-    :timestamp: 2012-04-26 21:54:25 +02:00
-  - :path: app/assets/stylesheets/application.css
-    :cursor_offset: 0
-    :timestamp: 2012-04-27 13:42:12 +02:00
   - :path: app/views/posts/_posts.html.erb
     :cursor_offset: 0
     :timestamp: 2012-04-26 21:54:25 +02:00
@@ -141,4 +129,16 @@ cursor_positions:
   - :path: app/assets/javascripts/bootstrap.js.coffee
     :cursor_offset: 0
     :timestamp: 2012-04-25 19:02:36 +02:00
+  - :path: app/assets/stylesheets/application.css
+    :cursor_offset: 494
+    :timestamp: 2012-05-04 19:58:20 +02:00
+  - :path: app/views/posts/_form.html.erb
+    :cursor_offset: 397
+    :timestamp: 2012-04-26 21:54:25 +02:00
+  - :path: app/assets/stylesheets/matches.css.scss
+    :cursor_offset: 211
+    :timestamp: 2012-05-04 19:32:28 +02:00
+  - :path: app/assets/javascripts/matches.js.coffee
+    :cursor_offset: 550
+    :timestamp: 2012-05-04 19:51:53 +02:00
 files_to_retain: 0
