@@ -16,6 +16,10 @@
   text-indent: 0px;
 }
 
+#ui-datepicker-div{
+  border: 0px;
+}
+
 
 .pagination {
   background: #f1f1f1;
