@@ -108,12 +108,6 @@ cursor_positions:
     :timestamp: 2012-04-25 20:27:21 +02:00
     :selection_offset: 238
     :block_selection_mode: false
-  - :path: app/views/posts/_posts.html.erb
-    :cursor_offset: 0
-    :timestamp: 2012-04-26 21:54:25 +02:00
-  - :path: spec/views/posts/index.html.erb_spec.rb
-    :cursor_offset: 0
-    :timestamp: 2012-04-26 21:54:25 +02:00
   - :path: app/models/post.rb
     :cursor_offset: 124
     :timestamp: 2012-04-27 09:41:11 +02:00
@@ -141,4 +135,10 @@ cursor_positions:
   - :path: app/assets/javascripts/matches.js.coffee
     :cursor_offset: 550
     :timestamp: 2012-05-04 19:51:53 +02:00
+  - :path: spec/views/posts/index.html.erb_spec.rb
+    :cursor_offset: 0
+    :timestamp: 2012-04-26 21:54:25 +02:00
+  - :path: app/views/posts/_posts.html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-04-26 21:54:25 +02:00
 files_to_retain: 0

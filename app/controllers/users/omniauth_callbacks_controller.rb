@@ -12,7 +12,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # Fixa allt det andra
       @user.avatar_url = auth.info.image
       if @user.player == nil
-        @user.player = Player.find_or_create_by(auth.info.name)
+        @user.set_player(auth.info.name)
       end
       sign_in_and_redirect @user, :event => :authentication
     else
