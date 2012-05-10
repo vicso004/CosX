@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120427105556) do
+ActiveRecord::Schema.define(:version => 20120510130216) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -50,10 +50,13 @@ ActiveRecord::Schema.define(:version => 20120427105556) do
   end
 
   create_table "carousel_items", :force => true do |t|
-    t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "active"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "goals", :force => true do |t|
