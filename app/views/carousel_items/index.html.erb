@@ -4,7 +4,7 @@
 <div class="carousel-inner">
     <% @items.each_with_index do |item, index| %>
       <div class="<% if index==0%>active <%end%>item">
-              <%= image_tag item.url %>
+              <%= image_tag item.image %>
           </div>
       <% end %>
   
