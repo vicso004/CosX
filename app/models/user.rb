@@ -25,4 +25,15 @@ class User < ActiveRecord::Base
     self.create!(:email => data.email, :password => Devise.friendly_token[0,20]) 
   end
   end
+  
+  
+  def set_player(name) 
+  player = Player.where(:name => name)
+
+		if not player.exists?
+			player = Player.create(:name => name)
+		end
+		self.player_id = Player.where(:name => name).first.id
+  end
+  
 end
