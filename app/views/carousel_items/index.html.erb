@@ -1,4 +1,3 @@
-
   <!-- carousel -->
 <div id="myCarousel" class="carousel">
 <div class="carousel-inner">
@@ -20,7 +19,6 @@
   <thead>
     <tr>
       <th>bild</th>
-      <th><%= model_class.human_attribute_name(:url) %></th>
       <th><%= model_class.human_attribute_name(:active) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
@@ -29,8 +27,7 @@
   <tbody>
     <% @carousel_items.each do |carousel_item| %>
       <tr>
-        <td><%= image_tag(carousel_item.url, :class => "item") %></td>
-        <td><%= carousel_item.url %></td>
+        <td><%= link_to( image_tag(carousel_item.image.url(:thumb)), carousel_item.image.url(:large)) %></td>
         <td><%= link_to switcher_name(carousel_item),
                       switch_path(carousel_item),
                       :action => :switch,
@@ -38,8 +35,6 @@
                       :class =>  switcher_style(carousel_item) %></td>
         <td><%=l carousel_item.created_at %></td>
         <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_carousel_item_path(carousel_item), :class => 'btn btn-mini' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       carousel_item_path(carousel_item),
                       :method => :delete,

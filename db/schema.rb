@@ -51,10 +51,13 @@ ActiveRecord::Schema.define(:version => 20120510134238) do
   end
 
   create_table "carousel_items", :force => true do |t|
-    t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "active"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "goals", :force => true do |t|

@@ -3,8 +3,8 @@ class CarouselItemsController < ApplicationController
   # GET /carousel_items.json
   def index
     @carousel_items = CarouselItem.all
-    #@items = CarouselItem.where(:active => true)
-    @items = Asset.all
+    @items = CarouselItem.where(:active => true)
+    #@items = Asset.all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @carousel_items }
