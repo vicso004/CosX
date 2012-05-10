@@ -23,8 +23,8 @@
 			        <a class="brand" href="/">CosX</a>
 			        <div class="nav-collapse">
 			          <ul class="nav">
-			            <li><%= link_to "Spelare", players_path %></li>
-			<li class="divider-vertical"></li>
+                  <li class="divider-vertical"></li>
+			            <li><%= link_to "Spelare", players_path %></li>			
 			            <li><%= link_to "Matcher", matches_path %></li>
 			            <li><%= link_to "Säsonger", seasons_path %></li>
 						<!--<li><%= link_to "Resultat",  %></li>-->
@@ -32,6 +32,12 @@
 					<form class="navbar-search pull-left">
 					  <input type="text" class="search-query" placeholder="Search">
 					</form>
+          
+          <% if current_user && current_user.admin? %>
+          <ul class="nav pull-right">
+            <li><%= link_to "Bildredigering", carousel_items_path%></li>
+            <li class="divider-vertical"></li>
+          <% end%>
 					<ul class="nav pull-right">
 					  <li class="dropdown">
 					    <a href="#"

@@ -1,4 +1,4 @@
-1336651876
+1336661977
 AddPaperclipToAssets	/home/christopher/workspace/tddd27/CosX/db/migrate/20120427093557_add_paperclip_to_assets.rb	class AddPaperclipToAssets 
 Admin	/home/christopher/workspace/tddd27/CosX/app/models/admin.rb	class Admin 
 Application	/home/christopher/workspace/tddd27/CosX/config/application.rb	  class Application 
@@ -17,6 +17,7 @@ CarouselItemsHelper	/home/christopher/workspace/tddd27/CosX/app/helpers/carousel
 ChangeCarouselItems	/home/christopher/workspace/tddd27/CosX/db/migrate/20120425172853_change_carousel_items.rb	class ChangeCarouselItems 
 ChangeMatches	/home/christopher/workspace/tddd27/CosX/db/migrate/20120423131601_change_matches.rb	class ChangeMatches 
 ChangePlayers	/home/christopher/workspace/tddd27/CosX/db/migrate/20120421111632_change_players.rb	class ChangePlayers 
+ChangeUser	/home/christopher/workspace/tddd27/CosX/db/migrate/20120510134238_change_user.rb	class ChangeUser 
 CosX	/home/christopher/workspace/tddd27/CosX/config/application.rb	module CosX
 CreateArticles	/home/christopher/workspace/tddd27/CosX/db/migrate/20120427105556_create_articles.rb	class CreateArticles 
 CreateAssets	/home/christopher/workspace/tddd27/CosX/db/migrate/20120427093423_create_assets.rb	class CreateAssets 
@@ -191,6 +192,7 @@ change	/home/christopher/workspace/tddd27/CosX/db/migrate/20120423135442_create_
 change	/home/christopher/workspace/tddd27/CosX/db/migrate/20120427092937_modify_match_datetime.rb	  def change
 change	/home/christopher/workspace/tddd27/CosX/db/migrate/20120427105556_create_articles.rb	  def change
 change	/home/christopher/workspace/tddd27/CosX/db/migrate/20120427093423_create_assets.rb	  def change
+change	/home/christopher/workspace/tddd27/CosX/db/migrate/20120510134238_change_user.rb	  def change
 concats two strings with spaces	/home/christopher/workspace/tddd27/CosX/spec/helpers/players_helper_spec.rb	it "concats two strings with spaces" do
 concats two strings with spaces	/home/christopher/workspace/tddd27/CosX/spec/helpers/goals_helper_spec.rb	it "concats two strings with spaces" do
 concats two strings with spaces	/home/christopher/workspace/tddd27/CosX/spec/helpers/posts_helper_spec.rb	it "concats two strings with spaces" do
@@ -244,7 +246,6 @@ edit	/home/christopher/workspace/tddd27/CosX/app/controllers/articles_controller
 edit	/home/christopher/workspace/tddd27/CosX/app/controllers/carousel_items_controller.rb	  def edit
 facebook	/home/christopher/workspace/tddd27/CosX/app/controllers/users/omniauth_callbacks_controller.rb	  def facebook
 find_for_facebook_oauth	/home/christopher/workspace/tddd27/CosX/app/models/user.rb	  def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
-find_or_create_by	/home/christopher/workspace/tddd27/CosX/app/models/player.rb		def self.find_or_create_by(name)
 full_name	/home/christopher/workspace/tddd27/CosX/app/models/season.rb	  def full_name
 goals/edit	/home/christopher/workspace/tddd27/CosX/spec/views/goals/edit.html.erb_spec.rb	describe "goals/edit" do
 goals/index	/home/christopher/workspace/tddd27/CosX/spec/views/goals/index.html.erb_spec.rb	describe "goals/index" do
@@ -259,6 +260,7 @@ index	/home/christopher/workspace/tddd27/CosX/app/controllers/picture_controller
 index	/home/christopher/workspace/tddd27/CosX/app/controllers/articles_controller.rb	  def index
 index	/home/christopher/workspace/tddd27/CosX/app/controllers/carousel_items_controller.rb	  def index
 input	/home/christopher/workspace/tddd27/CosX/app/inputs/time_input.rb	  def input
+is_admin?	/home/christopher/workspace/tddd27/CosX/app/models/user.rb	  def is_admin?(user)
 matches/edit	/home/christopher/workspace/tddd27/CosX/spec/views/matches/edit.html.erb_spec.rb	describe "matches/edit" do
 matches/index	/home/christopher/workspace/tddd27/CosX/spec/views/matches/index.html.erb_spec.rb	describe "matches/index" do
 matches/new	/home/christopher/workspace/tddd27/CosX/spec/views/matches/new.html.erb_spec.rb	describe "matches/new" do
