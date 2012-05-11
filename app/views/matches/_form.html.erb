@@ -13,7 +13,6 @@
   <%= f.input :season, :collection => season_collection %>
   <div class="form-actions">
     <%= f.button :submit, :class => 'btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                matches_path, :class => 'btn' %>
+    <%= link_to "Avbryt", matches_path, :class => 'btn' %>
   </div>
 <% end %>

@@ -1,16 +1,16 @@
 <%- model_class = Match.new.class -%>
-<h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+<h1>Matcher</h1>
 <table class="table table-striped">
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:datum) %></th>
       <th>Vår poäng</th>
-      <th><%= model_class.human_attribute_name(:other_team) %></th>
-      <th><%= model_class.human_attribute_name(:score_other) %></th>
-      <th><%= model_class.human_attribute_name(:season_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th>Motståndarlaget</th>
+      <th>Motståndarlagets mål</th>
+      <th>Säsong</th>
+      <th>Skapad</th>
+      <th>Val</th>
     </tr>
   </thead>
   <tbody>
@@ -24,23 +24,18 @@
         <td><%= match.season.full_name %></td>
         <td><%=l match.created_at %></td>
         <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+          <%= link_to 'Editera',
                       edit_match_path(match), :class => 'btn btn-mini' %>
           <%= link_to "Lägg till mål",
                       new_match_goal_path(match), :class => 'btn btn-mini' %>                      
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      match_path(match),
-                      :method => :delete,
-                      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
-                      :class => 'btn btn-mini btn-danger' %>
-        </td>
+          <%= link_to 'Ta bort', match_path(match), :confirm => 'Är du säker?', :method => :delete,:class => 'btn btn-mini btn-danger' %></td> 
       </tr>
     <% end %>
   </tbody>
 </table>
 
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
+<%= link_to 'Ny match',
             new_match_path,
             :class => 'btn btn-primary' %>
 

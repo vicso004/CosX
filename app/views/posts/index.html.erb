@@ -1,7 +1,6 @@
-           
- <!-- carousel -->
-<div id="myCarousel" class="carousel">
-<div class="carousel-inner">          
+<!-- carousel -->
+	<div id="myCarousel" class="carousel">
+		<div class="carousel-inner">          
  
     <% @items.each_with_index do |item, index| %>
       <div class="<% if index==0%>active <%end%>item">
@@ -9,24 +8,23 @@
           </div>
       <% end %>
 
+	</div>
+
+  	<!-- Carousel nav -->
+  		<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  		<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
 
-  <!-- Carousel nav -->
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-</div>
 
+<!-- Posts -->
+	<%- model_class = Post.new.class -%>
 
-<!-- rest of posts -->
-<%- model_class = Post.new.class -%>
-<h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
-
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_post_path,
-            :class => 'btn btn-primary' %>
-
-<div id="posts">
-	<%= render :partial => 'posts' %>
-</div>
+	<div id="posts">     
+		<%= link_to "Ny post",
+	             new_post_path,
+	            :class => 'btn btn-primary' %> 
+	
+		<%= render :partial => 'posts' %>
+	</div>
 
 <%= will_paginate @posts, :page_links => false, previous_label: h("<<"), next_label: h(">>") %>

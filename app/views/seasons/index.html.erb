@@ -1,9 +1,9 @@
-<h1>Listing seasons</h1>
+<h1>Säsonger</h1>
 
 <table>
   <tr>
     <th>Period</th>
-    <th>Year</th>
+    <th>År</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,12 @@
   <tr>
     <td><%= season.period %></td>
     <td><%= season.year %></td>
-    <td><%= link_to 'Show', season %></td>
-    <td><%= link_to 'Edit', edit_season_path(season) %></td>
-    <td><%= link_to 'Destroy', season, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Editera', edit_season_path(season), :class => 'btn btn-mini' %></td>
+    <td><%= link_to 'Ta bort', season, confirm: 'Är du säker?', method: :delete,:class => 'btn btn-mini btn-danger' %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Season', new_season_path %>
+<%= link_to 'Ny säsong', new_season_path, :class =>'btn btn-primary' %>

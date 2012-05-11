@@ -1,9 +1,9 @@
-<h1>Listing albums</h1>
+<h1>Album</h1>
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Content</th>
+    <th>Titel</th>
+    <th>Innehåll</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= article.title %></td>
     <td><%= article.content %></td>
-    <td><%= link_to 'Show', article %></td>
-    <td><%= link_to 'Edit', edit_article_path(article) %></td>
-    <td><%= link_to 'Destroy', article, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Visa', article %></td>
+    <td><%= link_to 'Editera', edit_article_path(article) %></td>
+    <td><%= link_to 'Ta bort', article, confirm: 'Är du säker?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Article', new_article_path %>
+<%= link_to 'Nytt album', new_article_path, :class => 'btn-primary'  %>
