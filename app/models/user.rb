@@ -36,8 +36,10 @@ class User < ActiveRecord::Base
 		end
 		self.player_id = Player.where(:name => name).first.id
   end
-  
-  def is_admin?(user)
-    user.admin
+    
+  def upcomming_matches
+    
+    self.matches.where("datum >= ?",Date.today)
+    
   end
 end

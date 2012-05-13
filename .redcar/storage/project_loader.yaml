@@ -1,6 +1,5 @@
 --- 
 open_files: 
-  - spec/views/posts/index.html.erb_spec.rb
-  - app/views/posts/_posts.html.erb
-  - app/models/post.rb
-  - app/views/posts/_form.html.erb
+  - app/views/matches/_form.html.erb
+  - app/controllers/matches_controller.rb
+  - app/helpers/matches_helper.rb

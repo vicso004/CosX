@@ -10,12 +10,12 @@
       <div class="field">
   <%= f.label :player_ids, "Spelare" %><br />
   <%= f.collection_select :player_ids, Player.order(:name), :id, :name, {}, {multiple: true} %>
-  </div>
+</div>
 
   <%= f.input :tid, :input_html=>{:class => 'input-time'} %>
   <%= f.input :other_team %>
   <%= f.input :score_other %>
-  <%= f.input :season, :collection => season_collection %>
+  <%= f.collection_select :season, @seasons, :id, :full_name %>
   <div class="form-actions">
     <%= f.button :submit, :class => 'btn-primary' %>
     <%= link_to "Avbryt", matches_path, :class => 'btn' %>

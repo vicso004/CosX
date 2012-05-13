@@ -49,7 +49,7 @@
 					          <b class="caret"></b>
 					    </a>
 					    <ul class="dropdown-menu">
-					      	<% if current_user %>
+					      	<% if current_user and not current_user.admin %>
 						
 							    <%= image_tag current_user.avatar_url, :alt =>"avatar" %>
 							<li class="divider"></li>
@@ -71,7 +71,7 @@
 	<!-- main container -->
 	<div class="container-fluid">
 	  <div class="row-fluid">
-	    <div class="span10">
+	    <div class="span8">
 	      <!--body content-->
 	      	<!-- flash messages -->		
   <% flash.each do |name, msg| %>
@@ -87,9 +87,7 @@
 
 	<%= yield %>
 	    </div>
-	    <div class="span2">
-  	<div id="calendar">
-  	</div>                     
+	    <div class="span4">        
 	<h3>Stöd CosX!</h3> 
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 	<input type="hidden" name="cmd" value="_s-xclick">
@@ -98,7 +96,14 @@
 	<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 	<img alt="" border="0" src="https://www.paypalobjects.com/sv_SE/i/scr/pixel.gif" width="1" height="1">
 	</form>
-
+  <% if current_user and not current_user.admin %>
+  <h3>Dina kommande matcher</h3>
+  <ul>
+    <%current_user.player.matches.where("datum >= ?",Date.today).each do |m| %>
+    <li><%= m.other_team%> den <%= m.datum%> klockan <%= m.tid.strftime("%H:%M")%></li>    
+    <%end%>
+  </ul>
+  <%end%>
 	  </div>
 	</div>
 

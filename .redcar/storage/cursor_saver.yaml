@@ -61,12 +61,6 @@ cursor_positions:
   - :path: app/models/season.rb
     :cursor_offset: 119
     :timestamp: 2012-04-27 14:48:35 +02:00
-  - :path: app/views/seasons/_form.html.erb
-    :cursor_offset: 64
-    :timestamp: 2012-04-27 14:49:38 +02:00
-  - :path: app/controllers/matches_controller.rb
-    :cursor_offset: 561
-    :timestamp: 2012-04-25 17:57:39 +02:00
   - :path: app/helpers/application_helper.rb
     :cursor_offset: 0
     :timestamp: 2012-04-25 17:57:39 +02:00
@@ -82,9 +76,6 @@ cursor_positions:
   - :path: config/routes.rb
     :cursor_offset: 0
     :timestamp: 2012-04-26 21:54:25 +02:00
-  - :path: app/views/layouts/application.html.erb
-    :cursor_offset: 2677
-    :timestamp: 2012-04-29 12:32:50 +02:00
   - :path: app/assets/javascripts/calendar.js.coffee
     :cursor_offset: 0
     :timestamp: 2012-04-29 12:37:14 +02:00
@@ -125,11 +116,6 @@ cursor_positions:
   - :path: db/migrate/20120510135808_change_user_again.rb
     :cursor_offset: 126
     :timestamp: 2012-05-10 16:02:47 +02:00
-  - :path: app/models/user.rb
-    :cursor_offset: 11
-    :timestamp: 2012-05-10 16:04:50 +02:00
-    :selection_offset: 0
-    :block_selection_mode: false
   - :path: app/controllers/users/omniauth_callbacks_controller.rb
     :cursor_offset: 574
     :timestamp: 2012-05-10 14:06:26 +02:00
@@ -193,9 +179,6 @@ cursor_positions:
   - :path: app/views/matches/index.html.erb
     :cursor_offset: 0
     :timestamp: 2012-05-11 15:34:13 +02:00
-  - :path: app/views/matches/_form.html.erb
-    :cursor_offset: 391
-    :timestamp: 2012-05-13 20:24:57 +02:00
   - :path: app/assets/stylesheets/application.css
     :cursor_offset: 331
     :timestamp: 2012-05-13 20:22:04 +02:00
@@ -214,4 +197,25 @@ cursor_positions:
   - :path: app/models/match.rb
     :cursor_offset: 54
     :timestamp: 2012-05-13 20:29:55 +02:00
+  - :path: app/views/players/_form.html.erb
+    :cursor_offset: 471
+    :timestamp: 2012-05-13 22:56:53 +02:00
+  - :path: app/views/layouts/application.html.erb
+    :cursor_offset: 2048
+    :timestamp: 2012-05-13 22:41:54 +02:00
+  - :path: app/models/user.rb
+    :cursor_offset: 1111
+    :timestamp: 2012-05-13 22:24:03 +02:00
+  - :path: app/views/seasons/_form.html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-05-11 15:34:13 +02:00
+  - :path: app/views/matches/_form.html.erb
+    :cursor_offset: 571
+    :timestamp: 2012-05-13 23:12:47 +02:00
+  - :path: app/controllers/matches_controller.rb
+    :cursor_offset: 948
+    :timestamp: 2012-05-13 23:18:17 +02:00
+  - :path: app/helpers/matches_helper.rb
+    :cursor_offset: 0
+    :timestamp: 2012-05-10 17:16:41 +02:00
 files_to_retain: 0
