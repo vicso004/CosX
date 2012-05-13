@@ -11,6 +11,10 @@ jQuery ->
   prevText: '<<',
   nextText: '>>'
   });
+  
+  
+jQuery ->
+  $('#match_player_ids').chosen()  
 
   
   

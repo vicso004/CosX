@@ -23,6 +23,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
  gem "paperclip", "~> 3.0"
   gem 'twitter-bootstrap-rails'
+  gem 'chosen-rails'
 end
 
 gem 'jquery-rails'

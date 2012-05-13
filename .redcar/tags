@@ -1,4 +1,4 @@
-1336932263
+1336934027
 AddPaperclipToAssets	/home/christopher/workspace/tddd27/CosX/db/migrate/20120427093557_add_paperclip_to_assets.rb	class AddPaperclipToAssets 
 Admin	/home/christopher/workspace/tddd27/CosX/app/models/admin.rb	class Admin 
 Application	/home/christopher/workspace/tddd27/CosX/config/application.rb	  class Application 
