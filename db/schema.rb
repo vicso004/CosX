@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120510134238) do
+ActiveRecord::Schema.define(:version => 20120513173341) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20120510134238) do
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "carousel_items", :force => true do |t|
@@ -71,6 +72,17 @@ ActiveRecord::Schema.define(:version => 20120510134238) do
   add_index "goals", ["goaler_id"], :name => "index_goals_on_goaler_id"
   add_index "goals", ["match_id"], :name => "index_goals_on_match_id"
 
+  create_table "match_assignments", :force => true do |t|
+    t.integer  "player_id"
+    t.integer  "match_id"
+    t.boolean  "confirmed"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "match_assignments", ["match_id"], :name => "index_match_assignments_on_match_id"
+  add_index "match_assignments", ["player_id"], :name => "index_match_assignments_on_player_id"
+
   create_table "matches", :force => true do |t|
     t.string   "other_team"
     t.integer  "score_other"
@@ -82,16 +94,6 @@ ActiveRecord::Schema.define(:version => 20120510134238) do
   end
 
   add_index "matches", ["season_id"], :name => "index_matches_on_season_id"
-
-  create_table "matches_players", :force => true do |t|
-    t.integer  "match_id"
-    t.integer  "player_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "matches_players", ["match_id"], :name => "index_matches_players_on_match_id"
-  add_index "matches_players", ["player_id"], :name => "index_matches_players_on_player_id"
 
   create_table "players", :force => true do |t|
     t.string   "name"

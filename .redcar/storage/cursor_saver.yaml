@@ -123,24 +123,12 @@ cursor_positions:
   - :path: app/assets/javascripts/matches.js.coffee
     :cursor_offset: 550
     :timestamp: 2012-05-04 19:51:53 +02:00
-  - :path: spec/views/posts/index.html.erb_spec.rb
-    :cursor_offset: 0
-    :timestamp: 2012-04-26 21:54:25 +02:00
-  - :path: app/views/posts/_posts.html.erb
-    :cursor_offset: 0
-    :timestamp: 2012-04-26 21:54:25 +02:00
   - :path: app/controllers/articles_controller.rb
     :cursor_offset: 0
     :timestamp: 2012-05-10 13:43:11 +02:00
   - :path: Gemfile
     :cursor_offset: 0
     :timestamp: 2012-05-10 13:43:11 +02:00
-  - :path: app/views/posts/_form.html.erb
-    :cursor_offset: 397
-    :timestamp: 2012-04-26 21:54:25 +02:00
-  - :path: app/models/post.rb
-    :cursor_offset: 124
-    :timestamp: 2012-04-27 09:41:11 +02:00
   - :path: app/models/picture.rb
     :cursor_offset: 0
     :timestamp: 2012-05-10 13:43:11 +02:00
@@ -183,4 +171,35 @@ cursor_positions:
   - :path: app/views/devise/registrations/new.html.erb
     :cursor_offset: 469
     :timestamp: 2012-05-10 16:36:28 +02:00
+  - :path: spec/views/posts/index.html.erb_spec.rb
+    :cursor_offset: 0
+    :timestamp: 2012-04-26 21:54:25 +02:00
+  - :path: app/views/posts/_posts.html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-05-11 15:34:13 +02:00
+  - :path: app/models/post.rb
+    :cursor_offset: 124
+    :timestamp: 2012-04-27 09:41:11 +02:00
+  - :path: app/views/posts/_form.html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-05-11 15:34:13 +02:00
+  - :path: app/models/match_assignment.rb
+    :cursor_offset: 138
+    :timestamp: 2012-05-13 19:48:50 +02:00
+  - :path: db/migrate/20120423130143_create_goals.rb
+    :cursor_offset: 235
+    :timestamp: 2012-04-25 17:57:39 +02:00
+    :selection_offset: 203
+    :block_selection_mode: false
+  - :path: db/migrate/20120513173341_create_match_assignments.rb
+    :cursor_offset: 317
+    :timestamp: 2012-05-13 19:38:35 +02:00
+  - :path: db/migrate/20120513172122_dropmatches_players.rb
+    :cursor_offset: 100
+    :timestamp: 2012-05-13 19:26:57 +02:00
+  - :path: db/migrate/20120423135442_create_matches_players.rb
+    :cursor_offset: 99
+    :timestamp: 2012-05-04 20:39:05 +02:00
+    :selection_offset: 84
+    :block_selection_mode: false
 files_to_retain: 0

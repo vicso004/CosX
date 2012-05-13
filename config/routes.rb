@@ -1,4 +1,6 @@
 CosX::Application.routes.draw do
+  resources :match_assignments
+
   resources :articles
 
   resources :carousel_items

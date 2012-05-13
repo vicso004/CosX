@@ -1,0 +1,27 @@
+<h1>Listing match_assignments</h1>
+
+<table>
+  <tr>
+    <th>Player</th>
+    <th>Match</th>
+    <th>Confirmed</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @match_assignments.each do |match_assignment| %>
+  <tr>
+    <td><%= match_assignment.player_id %></td>
+    <td><%= match_assignment.match_id %></td>
+    <td><%= match_assignment.confirmed %></td>
+    <td><%= link_to 'Show', match_assignment %></td>
+    <td><%= link_to 'Edit', edit_match_assignment_path(match_assignment) %></td>
+    <td><%= link_to 'Destroy', match_assignment, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Match assignment', new_match_assignment_path %>
