@@ -45,13 +45,14 @@ class GoalsController < ApplicationController
   # POST /goals
   # POST /goals.json
   def create
+    
+#    @match = Match.find(params[:match_id])
+#    @players = @match.players
     @goal = Goal.new(params[:goal])
-    @match = Match.find(params[:match_id])
-    @players = @match.players
-
+    @goal.match = Match.find(4)
     respond_to do |format|
       if @goal.save
-        format.html { redirect_to match_goals_path, notice: 'Goal was successfully created.' }
+        format.html { redirect_to matches_path, notice: 'Goal was successfully created.' }
       else
         format.html { render action: "new" }
       end
@@ -67,7 +68,7 @@ class GoalsController < ApplicationController
 
     respond_to do |format|
       if @goal.update_attributes(params[:goal])
-        format.html { redirect_to match_goals_path, notice: 'Goal was successfully updated.' }
+        format.html { redirect_to matches_path, notice: 'Goal was successfully updated.' }
       else
         format.html { render action: "edit" }
       end

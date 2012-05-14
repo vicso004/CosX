@@ -5,11 +5,9 @@
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:datum) %></th>
-      <th>Vår poäng</th>
       <th>Motståndarlaget</th>
-      <th>Motståndarlagets mål</th>
+      <th>Resultat</th>
       <th>Säsong</th>
-      <th>Skapad</th>
       <th>Val</th>
     </tr>
   </thead>
@@ -18,17 +16,21 @@
       <tr>
         <td><%= link_to match.id, match_path(match) %></td>
         <td><%= match.datum %></td>
-        <td><%= match.goals.length %></td>
         <td><%= match.other_team %></td>
-        <td><%= match.score_other %></td>
+        <td><%= match.goals.length %> - <%= match.score_other %></td>
         <td><%= match.season.full_name %></td>
-        <td><%=l match.created_at %></td>
         <td>
           <%= link_to 'Editera',
                       edit_match_path(match), :class => 'btn btn-mini' %>
           <%= link_to "Lägg till mål",
                       new_match_goal_path(match), :class => 'btn btn-mini' %>                      
-          <%= link_to 'Ta bort', match_path(match), :confirm => 'Är du säker?', :method => :delete,:class => 'btn btn-mini btn-danger' %></td> 
+          <%= link_to 'Ta bort', match_path(match), :confirm => 'Är du säker?', :method => :delete,:class => 'btn btn-mini btn-danger' %>
+          <%= link_to 'Skicka mail',
+                      mail_path(match),
+                      :action => :send_mail,
+                      :method => :put,
+                      :class =>  'btn btn-mini' %>  
+        </td> 
       </tr>
     <% end %>
   </tbody>

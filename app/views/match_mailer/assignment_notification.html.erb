@@ -1,0 +1,14 @@
+<p>Hej <%= @player.name.split.first%>!</p>
+
+<p>Nu är det dags igen för match, denna gång mot <%= @match.other_team%>.</p> 
+<p>Det uttagna laget är :</p> 
+<ul>
+<% @match.players.each do |player| %>
+<li><%= link_to player.name, player_url(player) %></li>
+<%end%>
+</ul>
+<p>Konfirmera att du kommer genom att klicka på
+  <%= link_to 'denna länk', match_assignments_url+"/"+@assignment.id.to_s+"/confirm", :metod => :put, :action => :confirm%></p>
+  
+  
+  

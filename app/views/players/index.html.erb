@@ -7,6 +7,8 @@
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:position) %></th>
       <th><%= model_class.human_attribute_name(:active) %></th>
+      <th>Mål</th>
+      <th>Assist</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -18,8 +20,9 @@
           <%end%></td>
         <td><%= player.name %></td>
         <td><%= player.position %></td>
-        <td><%= player.active %></td>
-        <td><%=l player.created_at %></td>
+        <td><%= player.active ? "Ja" : "Nej" %></td>
+        <td><%= player.made_goals %></td>
+        <td><%= player.made_assists %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_player_path(player), :class => 'btn btn-mini' %>

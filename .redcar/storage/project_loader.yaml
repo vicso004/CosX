@@ -1,5 +1,0 @@
---- 
-open_files: 
-  - app/views/matches/_form.html.erb
-  - app/controllers/matches_controller.rb
-  - app/helpers/matches_helper.rb
