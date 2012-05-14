@@ -4,7 +4,7 @@ class MatchAssignmentsController < ApplicationController
   def index
     @match_assignments = MatchAssignment.all
     @players = Player.where(:active => true)
-    @matches = Matches.all
+    @matches = Match.all
 
     respond_to do |format|
       format.html # index.html.erb
