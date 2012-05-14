@@ -8,5 +8,24 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require chosen-jquery
-//= require twitter/bootstrap
-//= require_tree .
+//= require twitter/bootstrap    
+//= require fancybox
+//= require_tree .      
+
+// För galleriet 
+$(document).ready(function() {
+	
+	//kör
+	$("a.fancybox").fancybox();      
+
+	//För flera bilder
+	
+	$("a.group").fancybox({
+		'transitionIn'	:	'elastic',
+		'transitionOut'	:	'elastic',
+		'speedIn'		:	600, 
+		'speedOut'		:	200, 
+		'overlayShow'	:	false, 
+	});
+	
+});
