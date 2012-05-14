@@ -1,4 +1,8 @@
 CosX::Application.routes.draw do
+  
+  match 'carousel_items/:id/switch' => 'carousel_items#switch'
+  match 'matches/:id/send_mail' => 'matches#send_mail'
+  match 'match_assignments/:id/confirm' => 'match_assignments#confirm'  
   resources :match_assignments
 
   resources :articles
@@ -25,7 +29,8 @@ CosX::Application.routes.draw do
 
   root :to => 'posts#index'
   
-  match 'carousel_items/:id/switch' => 'carousel_items#switch'
+
+  
 #  match 'matches/:id/assign' => 'matches_players#new'
 
   # The priority is based upon order of creation:

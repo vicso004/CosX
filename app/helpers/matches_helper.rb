@@ -1,13 +1,10 @@
 module MatchesHelper
   
-  def season_collection
-    
-    a = Array.new()
-    Season.all.each do |s|
-      a.push(s.full_name)
-    end
-    a
-    
-  end
+  
+  
+  
+  def mail_path(match)
+    	'matches/'+match.id.to_s+'/send_mail'
+ 	end
   
 end

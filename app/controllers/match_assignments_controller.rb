@@ -3,6 +3,8 @@ class MatchAssignmentsController < ApplicationController
   # GET /match_assignments.json
   def index
     @match_assignments = MatchAssignment.all
+    @players = Player.where(:active => true)
+    @matches = Matches.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -78,6 +80,18 @@ class MatchAssignmentsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to match_assignments_url }
       format.json { head :ok }
+    end
+  end
+  
+  def confirm
+    @match_assignment = MatchAssignment.find(params[:id])
+    @match_assignment.confirmed = true
+    respond_to do |format|
+      if @match_assignment.save
+        format.html {redirect_to root_path, notice: "Ses pa matchen"}
+      else
+        format.html {redirect_to root_path, error: "Nagot gick snett"}
+      end
     end
   end
 end

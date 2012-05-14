@@ -3,11 +3,6 @@ cursor_positions:
   - :path: app/views/posts/index.html.erb
     :cursor_offset: 426
     :timestamp: 2012-04-25 20:30:07 +02:00
-  - :path: config/application.rb
-    :cursor_offset: 600
-    :timestamp: 2012-04-25 17:57:39 +02:00
-    :selection_offset: 580
-    :block_selection_mode: false
   - :path: script/rails
     :cursor_offset: 0
     :timestamp: 2012-04-25 17:57:39 +02:00
@@ -41,11 +36,6 @@ cursor_positions:
   - :path: lib/templates/erb/scaffold/_form.html.erb
     :cursor_offset: 0
     :timestamp: 2012-04-26 21:54:25 +02:00
-  - :path: app/controllers/carousel_items_controller.rb
-    :cursor_offset: 30
-    :timestamp: 2012-04-26 21:54:25 +02:00
-    :selection_offset: 0
-    :block_selection_mode: false
   - :path: app/assets/stylesheets/bootstrap_and_overrides.css.less
     :cursor_offset: 1141
     :timestamp: 2012-04-27 13:44:34 +02:00
@@ -73,9 +63,6 @@ cursor_positions:
   - :path: app/assets/javascripts/goals.js.coffee
     :cursor_offset: 0
     :timestamp: 2012-04-25 17:57:39 +02:00
-  - :path: config/routes.rb
-    :cursor_offset: 0
-    :timestamp: 2012-04-26 21:54:25 +02:00
   - :path: app/assets/javascripts/calendar.js.coffee
     :cursor_offset: 0
     :timestamp: 2012-04-29 12:37:14 +02:00
@@ -108,11 +95,6 @@ cursor_positions:
   - :path: app/models/carousel_item.rb
     :cursor_offset: 0
     :timestamp: 2012-05-10 13:43:11 +02:00
-  - :path: app/views/carousel_items/index.html.erb
-    :cursor_offset: 2181
-    :timestamp: 2012-05-10 13:43:11 +02:00
-    :selection_offset: 0
-    :block_selection_mode: false
   - :path: db/migrate/20120510135808_change_user_again.rb
     :cursor_offset: 126
     :timestamp: 2012-05-10 16:02:47 +02:00
@@ -171,9 +153,6 @@ cursor_positions:
   - :path: app/controllers/goals_controller.rb
     :cursor_offset: 197
     :timestamp: 2012-05-04 21:15:55 +02:00
-  - :path: app/views/matches/index.html.erb
-    :cursor_offset: 0
-    :timestamp: 2012-05-11 15:34:13 +02:00
   - :path: app/assets/stylesheets/application.css
     :cursor_offset: 331
     :timestamp: 2012-05-13 20:22:04 +02:00
@@ -183,9 +162,6 @@ cursor_positions:
   - :path: Gemfile
     :cursor_offset: 573
     :timestamp: 2012-05-13 20:13:56 +02:00
-  - :path: app/models/match_assignment.rb
-    :cursor_offset: 86
-    :timestamp: 2012-05-13 20:03:39 +02:00
   - :path: app/models/player.rb
     :cursor_offset: 272
     :timestamp: 2012-05-13 20:04:18 +02:00
@@ -204,12 +180,6 @@ cursor_positions:
   - :path: app/views/matches/_form.html.erb
     :cursor_offset: 571
     :timestamp: 2012-05-13 23:12:47 +02:00
-  - :path: app/controllers/matches_controller.rb
-    :cursor_offset: 948
-    :timestamp: 2012-05-13 23:18:17 +02:00
-  - :path: app/helpers/matches_helper.rb
-    :cursor_offset: 0
-    :timestamp: 2012-05-10 17:16:41 +02:00
   - :path: db/migrate/20120427092937_modify_match_datetime.rb
     :cursor_offset: 70
     :timestamp: 2012-05-10 17:16:41 +02:00
@@ -230,4 +200,62 @@ cursor_positions:
   - :path: app/views/players/index.html.erb
     :cursor_offset: 798
     :timestamp: 2012-05-14 09:14:26 +02:00
+  - :path: app/helpers/carousel_items_helper.rb
+    :cursor_offset: 102
+    :timestamp: 2012-04-26 21:54:25 +02:00
+    :selection_offset: 29
+    :block_selection_mode: false
+  - :path: app/mailers/match_mailer.rb
+    :cursor_offset: 392
+    :timestamp: 2012-05-14 11:33:34 +02:00
+    :selection_offset: 354
+    :block_selection_mode: false
+  - :path: app/controllers/carousel_items_controller.rb
+    :cursor_offset: 2645
+    :timestamp: 2012-05-10 17:16:41 +02:00
+    :selection_offset: 2531
+    :block_selection_mode: false
+  - :path: config/environment.rb
+    :cursor_offset: 0
+    :timestamp: 2012-04-25 17:57:39 +02:00
+  - :path: config/application.rb
+    :cursor_offset: 600
+    :timestamp: 2012-04-25 17:57:39 +02:00
+    :selection_offset: 580
+    :block_selection_mode: false
+  - :path: app/views/match_mailer/assignment_notification.text.erb
+    :cursor_offset: 1
+    :timestamp: 2012-05-14 12:21:38 +02:00
+  - :path: config/environments/development.rb
+    :cursor_offset: 1154
+    :timestamp: 2012-05-14 12:15:15 +02:00
+  - :path: app/views/carousel_items/index.html.erb
+    :cursor_offset: 1737
+    :timestamp: 2012-05-10 17:16:41 +02:00
+  - :path: app/helpers/matches_helper.rb
+    :cursor_offset: 69
+    :timestamp: 2012-05-14 12:37:06 +02:00
+  - :path: app/views/match_assignments/index.html.erb
+    :cursor_offset: 762
+    :timestamp: 2012-05-14 12:54:52 +02:00
+  - :path: app/views/matches/index.html.erb
+    :cursor_offset: 1332
+    :timestamp: 2012-05-14 12:49:47 +02:00
+  - :path: app/controllers/match_assignments_controller.rb
+    :cursor_offset: 2674
+    :timestamp: 2012-05-14 13:19:31 +02:00
+  - :path: config/routes.rb
+    :cursor_offset: 223
+    :timestamp: 2012-05-14 13:00:20 +02:00
+  - :path: app/models/match_assignment.rb
+    :cursor_offset: 22
+    :timestamp: 2012-05-13 21:20:38 +02:00
+    :selection_offset: 0
+    :block_selection_mode: false
+  - :path: db/schema.rb
+    :cursor_offset: 0
+    :timestamp: 2012-05-14 11:15:49 +02:00
+  - :path: app/controllers/matches_controller.rb
+    :cursor_offset: 2380
+    :timestamp: 2012-05-14 12:58:30 +02:00
 files_to_retain: 0

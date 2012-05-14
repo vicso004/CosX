@@ -87,4 +87,20 @@ class MatchesController < ApplicationController
       format.json { head :ok }
     end
   end
+  
+  def send_mail
+    
+    
+    @match = Match.find(params[:id])
+    
+    @match.players.each do |player|
+      assignment = MatchAssignment.where(:player_id => player.id, :match_id => @match.id).first
+      MatchMailer.assignment_notification(player, @match, assignment).deliver
+    end  
+    respond_to do |format|
+      format.html { redirect_to matches_url, :notice => "Mail har skickats" }      
+    end
+    #alert "Mail har skickats ut"
+    
+  end
 end
