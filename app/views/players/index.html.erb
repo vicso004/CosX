@@ -18,7 +18,7 @@
           <%end%></td>
         <td><%= player.name %></td>
         <td><%= player.position %></td>
-        <td><%= player.active %></td>
+        <td><%= player.active ? "Ja" : "Nej" %></td>
         <td><%=l player.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

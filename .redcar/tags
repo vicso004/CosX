@@ -1,4 +1,4 @@
-1336943939
+1336979679
 AddPaperclipToAssets	/home/christopher/workspace/tddd27/CosX/db/migrate/20120427093557_add_paperclip_to_assets.rb	class AddPaperclipToAssets 
 Admin	/home/christopher/workspace/tddd27/CosX/app/models/admin.rb	class Admin 
 Application	/home/christopher/workspace/tddd27/CosX/config/application.rb	  class Application 
@@ -97,6 +97,7 @@ MatchesPlayersController	/home/christopher/workspace/tddd27/CosX/app/controllers
 MatchesPlayersControllerHelper	/home/christopher/workspace/tddd27/CosX/app/helpers/matches_players_controller_helper.rb	module MatchesPlayersControllerHelper
 ModifyCarouselitems	/home/christopher/workspace/tddd27/CosX/db/migrate/20120510130216_modify_carouselitems.rb	class ModifyCarouselitems 
 ModifyMatchDatetime	/home/christopher/workspace/tddd27/CosX/db/migrate/20120427092937_modify_match_datetime.rb	class ModifyMatchDatetime 
+ModifyPlayers	/home/christopher/workspace/tddd27/CosX/db/migrate/20120514070218_modify_players.rb	class ModifyPlayers 
 OmniauthCallbacksController	/home/christopher/workspace/tddd27/CosX/app/controllers/users/omniauth_callbacks_controller.rb	class Users::OmniauthCallbacksController 
 POST create	/home/christopher/workspace/tddd27/CosX/spec/controllers/matches_controller_spec.rb	describe "POST create" do
 POST create	/home/christopher/workspace/tddd27/CosX/spec/controllers/players_controller_spec.rb	describe "POST create" do
@@ -218,6 +219,7 @@ change	/home/christopher/workspace/tddd27/CosX/db/migrate/20120427093423_create_
 change	/home/christopher/workspace/tddd27/CosX/db/migrate/20120510134238_change_user.rb	  def change
 change	/home/christopher/workspace/tddd27/CosX/db/migrate/20120513172122_dropmatches_players.rb	  def change
 change	/home/christopher/workspace/tddd27/CosX/db/migrate/20120513173341_create_match_assignments.rb	  def change
+change	/home/christopher/workspace/tddd27/CosX/db/migrate/20120514070218_modify_players.rb	  def change
 concats two strings with spaces	/home/christopher/workspace/tddd27/CosX/spec/helpers/players_helper_spec.rb	it "concats two strings with spaces" do
 concats two strings with spaces	/home/christopher/workspace/tddd27/CosX/spec/helpers/goals_helper_spec.rb	it "concats two strings with spaces" do
 concats two strings with spaces	/home/christopher/workspace/tddd27/CosX/spec/helpers/posts_helper_spec.rb	it "concats two strings with spaces" do
