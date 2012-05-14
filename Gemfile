@@ -23,10 +23,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
  gem "paperclip", "~> 3.0"
   gem 'twitter-bootstrap-rails'
-  gem 'chosen-rails'
+  gem 'chosen-rails'      
+  gem 'fancybox-rails'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails'     
 
 group :test do
   gem 'spork', '0.9.0.rc9'
