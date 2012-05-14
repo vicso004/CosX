@@ -17,8 +17,7 @@
   <%#= f.collection_select :goaler_id, @players, :id, :name %><br />
   </div>
   <div class="field">
-    <%= f.label :assister_id %><br />
-  <%= f.collection_select :assister_id, @players, :id, :name  %><br />
+    <%= f.input :assister_id, :collection => @players %>
   </div>
   <div class="actions">
     <%= f.submit %>

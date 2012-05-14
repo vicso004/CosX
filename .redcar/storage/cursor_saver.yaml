@@ -192,9 +192,6 @@ cursor_positions:
   - :path: app/models/match.rb
     :cursor_offset: 54
     :timestamp: 2012-05-13 20:29:55 +02:00
-  - :path: app/views/players/_form.html.erb
-    :cursor_offset: 471
-    :timestamp: 2012-05-13 22:56:53 +02:00
   - :path: app/views/layouts/application.html.erb
     :cursor_offset: 2048
     :timestamp: 2012-05-13 22:41:54 +02:00
@@ -224,4 +221,13 @@ cursor_positions:
   - :path: db/migrate/20120425172853_change_carousel_items.rb
     :cursor_offset: 0
     :timestamp: 2012-04-26 21:54:25 +02:00
+  - :path: db/migrate/20120514070218_modify_players.rb
+    :cursor_offset: 104
+    :timestamp: 2012-05-14 09:06:30 +02:00
+  - :path: app/views/players/_form.html.erb
+    :cursor_offset: 430
+    :timestamp: 2012-05-14 09:09:57 +02:00
+  - :path: app/views/players/index.html.erb
+    :cursor_offset: 798
+    :timestamp: 2012-05-14 09:14:26 +02:00
 files_to_retain: 0
