@@ -36,6 +36,7 @@
           
           <% if current_user && current_user.admin? %>
           <ul class="nav pull-right">
+          
             <li><%= link_to "Bildredigering", carousel_items_path%></li>
             <li class="divider-vertical"></li>
           <% end%>
@@ -49,7 +50,7 @@
 					          <b class="caret"></b>
 					    </a>
 					    <ul class="dropdown-menu">
-					      	<% if current_user and not current_user.admin %>
+					      	<% if current_user  %>
 						
 							    <%= image_tag current_user.avatar_url, :alt =>"avatar" %>
 							<li class="divider"></li>
@@ -104,6 +105,18 @@
     <%end%>
   </ul>
   <%end%>
+  <% if current_user %>
+  
+  <% if current_user.admin == 't' %>
+admin 
+    <% elsif current_user.admin == 'f' %>
+användare
+    <% elsif current_user.admin == nil%>
+gä'st
+    <% end %>
+    <%end%>
+  
+  
 	  </div>
 	</div>
 

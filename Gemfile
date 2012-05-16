@@ -21,7 +21,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.1.4'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
- gem "paperclip", "~> 3.0"
+  gem "paperclip", "~> 3.0"
   gem 'twitter-bootstrap-rails'
   gem 'chosen-rails'      
   gem 'fancybox-rails'
@@ -38,6 +38,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'debugger'
 #  gem 'cucumber-rails'
 end
 

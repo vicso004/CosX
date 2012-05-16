@@ -1,8 +1,9 @@
 class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
+  load_and_authorize_resource
   def index
-    @articles = Article.all
+   # @articles = Article.all
 
     respond_to do |format|
       format.html # index.html.erb

@@ -4,6 +4,7 @@ class GoalsController < ApplicationController
   def index
     #@goals = Goal.where(:match_id => params[:match_id])
     @goals =Match.find(params[:match_id]).goals
+    authorize! :read, :goals 
     respond_to do |format|
       format.html # index.html.erb
       
@@ -14,7 +15,7 @@ class GoalsController < ApplicationController
   # GET /goals/1.json
   def show
     @goal = Goal.find(params[:id])
-
+    authorize! :read, :goals 
     respond_to do |format|
       format.html # show.html.erb
       
@@ -28,6 +29,8 @@ class GoalsController < ApplicationController
 #    @goal.match_id = params[:match_id]
     @match = Match.find(params[:match_id])
     @players = @match.players
+    
+    authorize! :manage, :goals 
 
     respond_to do |format|
       format.html # new.html.erb
@@ -38,6 +41,7 @@ class GoalsController < ApplicationController
   # GET /goals/1/edit
   def edit
     @goal = Goal.find(params[:id])
+    authorize! :manage, :goals 
     #@match = Match.find(params[:match_id])
     #@players = @match.players
   end
@@ -49,7 +53,8 @@ class GoalsController < ApplicationController
 #    @match = Match.find(params[:match_id])
 #    @players = @match.players
     @goal = Goal.new(params[:goal])
-    @goal.match = Match.find(4)
+    @goal.match = Match.find(params[:match_id])
+    authorize! :manage, :goals
     respond_to do |format|
       if @goal.save
         format.html { redirect_to matches_path, notice: 'Goal was successfully created.' }
@@ -65,7 +70,9 @@ class GoalsController < ApplicationController
     @goal = Goal.find(params[:id])
     @match = Match.find(params[:match_id])
     @players = @match.players
-
+    
+    authorize! :manage, :goals
+    
     respond_to do |format|
       if @goal.update_attributes(params[:goal])
         format.html { redirect_to matches_path, notice: 'Goal was successfully updated.' }
@@ -79,7 +86,9 @@ class GoalsController < ApplicationController
   # DELETE /goals/1.json
   def destroy
     @goal = Goal.find(params[:id])
+    authorize! :manage, :goals 
     @goal.destroy
+    
 
     respond_to do |format|
       format.html { redirect_to goals_url }
