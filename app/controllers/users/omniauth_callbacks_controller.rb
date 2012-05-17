@@ -1,7 +1,9 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  
+  skip_authorization_check
   def facebook
     # You need to implement the method below in your model
-
+    
     auth = request.env["omniauth.auth"]
     #render :text => request.env["omniauth.auth"].to_yaml
     @user = User.find_for_facebook_oauth(auth, current_user)

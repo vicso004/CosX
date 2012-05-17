@@ -1,9 +1,9 @@
 class PlayersController < ApplicationController
-  load_and_authorize_resource
+  authorize_resource
   # GET /players
   # GET /players.json
   def index
-#    @players = Player.all
+    @players = Player.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +14,7 @@ class PlayersController < ApplicationController
   # GET /players/1
   # GET /players/1.json
   def show
-#    @player = Player.find(params[:id])
+    @player = Player.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

@@ -1,9 +1,9 @@
 class SeasonsController < ApplicationController
-  load_and_authorize_resource
+  authorize_resource
   # GET /seasons
   # GET /seasons.json
   def index
-    seasons = Season.all
+    @seasons = Season.all
 
     respond_to do |format|
       format.html # index.html.erb

@@ -1,4 +1,7 @@
 class MatchAssignmentsController < ApplicationController
+  
+  authorize_resource
+  
   # GET /match_assignments
   # GET /match_assignments.json
   def index

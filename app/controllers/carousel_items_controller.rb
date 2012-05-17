@@ -1,7 +1,9 @@
 class CarouselItemsController < ApplicationController
+
+  authorize_resource
+  
   # GET /carousel_items
   # GET /carousel_items.json
-  load_and_authorize_resource
   def index
     @carousel_items = CarouselItem.all
     @items = CarouselItem.where(:active => true)

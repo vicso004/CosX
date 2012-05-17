@@ -6,24 +6,19 @@ class Ability
     #
     
     user ||= User.new # guest user (not logged in)
-    cannot :manage, :all
     
     #Admin
-     if user.admin?
+     if user.admin == "t"
        can :manage, :all
-        can :manage, Player
+
     #Logged in user  
-    elsif user.admin == false
-      cannot :manage, :articles
-      #can :manage, :all
+    elsif user.admin == "f"
+      
+      can :read, Player
     
     #Guest  
-    else
-      #can :read, :all
-      cannot :read, :all
+    elsif
       can :read, :posts
-      can :manage, :articles
-      can :read, :goals
     end
     
       

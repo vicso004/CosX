@@ -1,4 +1,7 @@
 class GoalsController < ApplicationController
+
+  authorize_resource
+  
   # GET /goals
   # GET /goals.json
   def index

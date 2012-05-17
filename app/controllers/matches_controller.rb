@@ -1,4 +1,7 @@
 class MatchesController < ApplicationController
+  
+  authorize_resource
+  
   # GET /matches
   # GET /matches.json
   def index

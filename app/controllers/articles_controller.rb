@@ -1,9 +1,13 @@
 class ArticlesController < ApplicationController
+
+  authorize_resource
+  
   # GET /articles
   # GET /articles.json
-  load_and_authorize_resource
+
   def index
-   # @articles = Article.all
+     authorize! :read, :articles
+    @articles = Article.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,7 +28,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/new
   # GET /articles/new.json
-  def new        
+  def new
     @article = Article.new()
          2.times { @article.assets.build }
 
