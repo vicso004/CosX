@@ -49,7 +49,7 @@ class MatchAssignmentsController < ApplicationController
 
     respond_to do |format|
       if @match_assignment.save
-        format.html { redirect_to @match_assignment, notice: 'Match assignment was successfully created.' }
+        format.html { redirect_to @match_assignment, notice: 'Lyckades' }
         format.json { render json: @match_assignment, status: :created, location: @match_assignment }
       else
         format.html { render action: "new" }
@@ -65,7 +65,7 @@ class MatchAssignmentsController < ApplicationController
 
     respond_to do |format|
       if @match_assignment.update_attributes(params[:match_assignment])
-        format.html { redirect_to @match_assignment, notice: 'Match assignment was successfully updated.' }
+        format.html { redirect_to @match_assignment, notice: 'Lyckades' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

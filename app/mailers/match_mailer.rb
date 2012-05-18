@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class MatchMailer < ActionMailer::Base
   default from: "CosXinnebandy@gmail.com"
 

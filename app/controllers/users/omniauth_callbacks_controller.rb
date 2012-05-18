@@ -9,7 +9,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     @user = User.find_for_facebook_oauth(auth, current_user)
 
     if @user.persisted?
-      flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Facebook"
+      flash[:notice] = "Inloggad med Facebook"
 
       # Fixa allt det andra
       @user.avatar_url = auth.info.image

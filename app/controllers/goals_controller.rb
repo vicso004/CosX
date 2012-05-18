@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class GoalsController < ApplicationController
 
   authorize_resource
@@ -7,10 +8,8 @@ class GoalsController < ApplicationController
   def index
     #@goals = Goal.where(:match_id => params[:match_id])
     @goals =Match.find(params[:match_id]).goals
-    authorize! :read, :goals 
     respond_to do |format|
       format.html # index.html.erb
-      
     end
   end
 
@@ -60,7 +59,7 @@ class GoalsController < ApplicationController
     authorize! :manage, :goals
     respond_to do |format|
       if @goal.save
-        format.html { redirect_to matches_path, notice: 'Goal was successfully created.' }
+        format.html { redirect_to matches_path, notice: 'Mål lades till' }
       else
         format.html { render action: "new" }
       end
@@ -78,7 +77,7 @@ class GoalsController < ApplicationController
     
     respond_to do |format|
       if @goal.update_attributes(params[:goal])
-        format.html { redirect_to matches_path, notice: 'Goal was successfully updated.' }
+        format.html { redirect_to matches_path, notice: 'Målet uppdaterades' }
       else
         format.html { render action: "edit" }
       end

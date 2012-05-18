@@ -17,7 +17,7 @@ class MatchesPlayersController < ApplicationController
 
     respond_to do |format|
       if @relaton.save
-        format.html { redirect_to @relaton, notice: 'lyckades' }
+        format.html { redirect_to @relaton, notice: 'Lyckades' }
         format.json { render json: @relaton, status: :created, location: @relaton }
       else
         format.html { render action: "new" }

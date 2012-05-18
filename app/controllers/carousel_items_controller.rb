@@ -48,7 +48,7 @@ class CarouselItemsController < ApplicationController
 
     respond_to do |format|
       if @carousel_item.save
-        format.html { redirect_to carousel_items_path, notice: 'Carousel item was successfully created.' }
+        format.html { redirect_to carousel_items_path, notice: 'Bilden skapad' }
         format.json { render json: @carousel_item, status: :created, location: @carousel_item }
       else
         format.html { render action: "new" }
@@ -64,7 +64,7 @@ class CarouselItemsController < ApplicationController
 
     respond_to do |format|
       if @carousel_item.update_attributes(params[:carousel_item])
-        format.html { redirect_to carousel_items_path, notice: 'Carousel item was successfully updated.' }
+        format.html { redirect_to carousel_items_path, notice: 'Bilden uppdaterades' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

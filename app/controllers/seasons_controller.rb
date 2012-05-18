@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class SeasonsController < ApplicationController
   authorize_resource
   # GET /seasons
@@ -45,7 +46,7 @@ class SeasonsController < ApplicationController
 
     respond_to do |format|
       if @season.save
-        format.html { redirect_to @season, notice: 'Season was successfully created.' }
+        format.html { redirect_to @season, notice: 'Säsong skapades' }
         format.json { render json: @season, status: :created, location: @season }
       else
         format.html { render action: "new" }
@@ -61,7 +62,7 @@ class SeasonsController < ApplicationController
 
     respond_to do |format|
       if @season.update_attributes(params[:season])
-        format.html { redirect_to @season, notice: 'Season was successfully updated.' }
+        format.html { redirect_to @season, notice: 'Säsong uppdaterades' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
