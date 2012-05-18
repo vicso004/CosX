@@ -1,15 +1,17 @@
 <%- model_class = Player.new.class -%>
-<h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+<h1>Spelare</h1>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Avatar</th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th>&nbsp</th>
+      <th>Namn</th>
       <th><%= model_class.human_attribute_name(:position) %></th>
-      <th><%= model_class.human_attribute_name(:active) %></th>
+      <th>Aktiv</th>
       <th>Mål</th>
       <th>Assist</th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <% if can? :manage, @players%>
+      <th>Val</th>
+      <% end %>
     </tr>
   </thead>
   <tbody>
@@ -23,20 +25,22 @@
         <td><%= player.active ? "Ja" : "Nej" %></td>
         <td><%= player.made_goals %></td>
         <td><%= player.made_assists %></td>
+        <% if can? :manage, player %>
         <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+          <%= link_to "Uppdatera",
                       edit_player_path(player), :class => 'btn btn-mini' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+          <%= link_to "Ta bort",
                       player_path(player),
                       :method => :delete,
                       :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
                       :class => 'btn btn-mini btn-danger' %>
         </td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
+<%= link_to "Ny spelare",
             new_player_path,
-            :class => 'btn btn-primary' %>
+            :class => 'btn btn-primary' if can? :manage, @players %>

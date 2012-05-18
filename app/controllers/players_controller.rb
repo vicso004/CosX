@@ -45,7 +45,7 @@ class PlayersController < ApplicationController
 
     respond_to do |format|
       if @player.save
-        format.html { redirect_to @player, notice: 'Player skapades' }
+        format.html { redirect_to players_path, notice: 'Spelare skapades' }
         format.json { render json: @player, status: :created, location: @player }
       else
         format.html { render action: "new" }
@@ -61,7 +61,7 @@ class PlayersController < ApplicationController
 
     respond_to do |format|
       if @player.update_attributes(params[:player])
-        format.html { redirect_to @player, notice: 'Player skapades' }
+        format.html { redirect_to players_path, notice: 'Spelare uppdaterades' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

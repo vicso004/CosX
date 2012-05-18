@@ -15,13 +15,15 @@
 </p>
 
 <div class="form-actions">
-  <%= link_to t('.back', :default => t("helpers.links.back")),
+<% if can? :manage, @player %>
+  <%= link_to "Tillbaka",
               players_path, :class => 'btn'  %>
-  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+  <%= link_to "Uppdatera",
               edit_player_path(@player), :class => 'btn' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+  <%= link_to "Ta bort",
               player_path(@player),
               :method => 'delete',
               :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
               :class => 'btn btn-danger' %>
+              <% end %>
 </div>
