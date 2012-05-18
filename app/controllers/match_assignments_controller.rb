@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class MatchAssignmentsController < ApplicationController
   
   authorize_resource
@@ -91,9 +92,21 @@ class MatchAssignmentsController < ApplicationController
     @match_assignment.confirmed = true
     respond_to do |format|
       if @match_assignment.save
-        format.html {redirect_to root_path, notice: "Ses pa matchen"}
+        format.html {redirect_to root_path, notice: "Ses på matchen"}
       else
-        format.html {redirect_to root_path, error: "Nagot gick snett"}
+        format.html {redirect_to root_path, error: "Något gick fel"}
+      end
+    end
+  end
+  
+  def deny
+    @match_assignment = MatchAssignment.find(params[:id])
+    @match_assignment.confirmed = false
+    respond_to do |format|
+      if @match_assignment.save
+        format.html {redirect_to root_path, notice: "Noterat..."}
+      else
+        format.html {redirect_to root_path, error: "Något gick fel"}
       end
     end
   end

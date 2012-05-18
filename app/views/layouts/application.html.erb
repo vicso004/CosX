@@ -97,7 +97,7 @@
 	<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 	<img alt="" border="0" src="https://www.paypalobjects.com/sv_SE/i/scr/pixel.gif" width="1" height="1">
 	</form>
-  <% if current_user and not current_user.admin %>
+  <% if current_user %>
   <h3>Dina kommande matcher</h3>
   <ul>
     <%current_user.player.matches.where("datum >= ?",Date.today).each do |m| %>

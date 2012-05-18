@@ -3,6 +3,7 @@ CosX::Application.routes.draw do
   match 'carousel_items/:id/switch' => 'carousel_items#switch'
   match 'matches/:id/send_mail' => 'matches#send_mail'
   match 'match_assignments/:id/confirm' => 'match_assignments#confirm'  
+  match 'match_assignments/:id/deny' => 'match_assignments#deny'  
   resources :match_assignments
 
   resources :articles
