@@ -6,8 +6,9 @@ class Ability
     #
     
     user ||= User.new # guest user (not logged in)
-    
+    #Gusest and all other can
     can :read, Post
+    
     #Admin
      if user.admin == "t"
        can :manage, :all

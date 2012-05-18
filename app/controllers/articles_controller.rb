@@ -6,7 +6,6 @@ class ArticlesController < ApplicationController
   # GET /articles.json
 
   def index
-     authorize! :read, :articles
     @articles = Article.all
 
     respond_to do |format|
