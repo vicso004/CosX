@@ -20,9 +20,9 @@
 	<%- model_class = Post.new.class -%>
 
 	<div id="posts">     
-		<%= link_to "Ny post",
+  <%= link_to "Ny post",
 	             new_post_path,
-	            :class => 'btn btn-primary' %> 
+	            :class => 'btn btn-primary' if can? :manage, @posts%> 
 	
 		<%= render :partial => 'posts' %>
 	</div>

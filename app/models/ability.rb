@@ -7,6 +7,7 @@ class Ability
     
     user ||= User.new # guest user (not logged in)
     
+    can :read, Post
     #Admin
      if user.admin == "t"
        can :manage, :all
@@ -15,10 +16,13 @@ class Ability
     elsif user.admin == "f"
       
       can :read, Player
+      can :read, Article
+      can :read, Match
+      can :manage, User
     
     #Guest  
-    elsif
-      can :read, :posts
+    #elsif
+      #can :read, Post
     end
     
       
