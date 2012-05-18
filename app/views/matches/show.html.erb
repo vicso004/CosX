@@ -1,23 +1,27 @@
-<%- model_class = @match.class -%>
-<h1><%=t '.title', :default => model_class.model_name.human %></h1>
+<h1>CosX <%= @match.goals.length.to_s + " - "+@match.score_other.to_s%> <%= @match.other_team+@match.datum.strftime(", %d/%m") %> </h1>
 
-
-<p>
-  <strong><%= model_class.human_attribute_name(:other_team) %>:</strong><br>
-  <%= @match.other_team %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:score_other) %>:</strong><br>
-  <%= @match.score_other %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:season_id) %>:</strong><br>
-  <%= @match.season_id %>
-</p>
-
-<div class="form-actions">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Mål</th>
+      <th>Målgörare</th>
+      <th>Assist</th>
+    </tr>
+  </thead>
+  <tbody>
+<% @match.goals.each_with_index do |goal, index| %>
+<tr>
+<td><%= index+1 %></td>
+<td><%= Player.find(goal.goaler_id).name %> </td>
+<td><%= Player.find(goal.assister_id).name unless goal.assister_id == nil %></td>
+</tr>
+<% end%>
+</tbody>
+</table>
+  <div class="form-actions">
   <%= link_to "Bakåt",
               matches_path, :class => 'btn'  %>
+              <% if can? :manage, @match%>
   <%= link_to "Editera",
               edit_match_path(@match), :class => 'btn' %>
   <%= link_to "Ta bort",
@@ -25,4 +29,5 @@
               :method => 'delete',
               :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
               :class => 'btn btn-danger' %>
+              <% end %>
 </div>

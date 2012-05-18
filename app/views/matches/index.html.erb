@@ -3,34 +3,39 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:datum) %></th>
       <th>Motståndarlaget</th>
       <th>Resultat</th>
       <th>Säsong</th>
+      <th>Visa</th>
+      <% if can? :manage, @matches %>
       <th>Val</th>
+      <% end %>
     </tr>
   </thead>
   <tbody>
     <% @matches.each do |match| %>
       <tr>
-        <td><%= link_to match.id, match_path(match) %></td>
         <td><%= match.datum %></td>
         <td><%= match.other_team %></td>
-        <td><%= match.goals.length %> - <%= match.score_other %></td>
+        <td><%= result(match) %></td>
         <td><%= match.season.full_name %></td>
+        <td><%= link_to 'Visa',
+                      match_path(match), :class => 'btn btn-mini' %>
+        <%if can? :manage, match %>
         <td>
           <%= link_to 'Editera',
                       edit_match_path(match), :class => 'btn btn-mini' %>
           <%= link_to "Lägg till mål",
                       new_match_goal_path(match), :class => 'btn btn-mini' %>                      
-          <%= link_to 'Ta bort', match_path(match), :confirm => 'Är du säker?', :method => :delete,:class => 'btn btn-mini btn-danger' %>
-          <%= link_to 'Skicka mail',
+                    <%= link_to 'Skicka mail',
                       mail_path(match),
                       :action => :send_mail,
                       :method => :put,
                       :class =>  'btn btn-mini' %>  
-        </td> 
+                      <%= link_to 'Ta bort', match_path(match), :confirm => 'Är du säker?', :method => :delete,:class => 'btn btn-mini btn-danger' %>
+        </td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -39,7 +44,7 @@
 
 <%= link_to 'Ny match',
             new_match_path,
-            :class => 'btn btn-primary' %>
+            :class => 'btn btn-primary' if can? :manage, @matches%>
 
 <br />
 
