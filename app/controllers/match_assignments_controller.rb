@@ -21,7 +21,11 @@ class MatchAssignmentsController < ApplicationController
     @match_assignment.confirmed = true
     respond_to do |format|
       if @match_assignment.save
-        format.html {redirect_to root_path, notice: "Ses på matchen"}
+        if current_user && current_user.admin == "t"
+          format.html {redirect_to match_assignments_path, notice: "Spelaren tackade ja"}
+        else
+          format.html {redirect_to root_path, notice: "Ses på matchen"}
+        end
       else
         format.html {redirect_to root_path, error: "Något gick fel"}
       end
@@ -33,7 +37,11 @@ class MatchAssignmentsController < ApplicationController
     @match_assignment.confirmed = false
     respond_to do |format|
       if @match_assignment.save
-        format.html {redirect_to root_path, notice: "Noterat..."}
+        if current_user && current_user.admin == "t"
+          format.html {redirect_to match_assignments_path, notice: "Spelaren tackade nej"}
+        else
+          format.html {redirect_to root_path, notice: "Noterat..."}
+        end
       else
         format.html {redirect_to root_path, error: "Något gick fel"}
       end

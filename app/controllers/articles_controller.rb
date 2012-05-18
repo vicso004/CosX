@@ -49,7 +49,7 @@ class ArticlesController < ApplicationController
     
     respond_to do |format|
       if @article.save
-        format.html { redirect_to @article, notice: 'Album skapades' }
+        format.html { redirect_to articles_path, notice: 'Album skapades' }
         format.json { render json: @article, status: :created, location: @article }
       else
         format.html { render action: "new" }
@@ -65,7 +65,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.update_attributes(params[:article])
-        format.html { redirect_to @article, notice: 'Album uppdaterades' }
+        format.html { redirect_to articles_path, notice: 'Album uppdaterades' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

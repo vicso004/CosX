@@ -12,9 +12,15 @@
         <%= f.fields_for :assets do |builder| %>
           <%= render 'asset_fields', f: builder %>        
        <% end %>
+      
       <%= link_to_add_fields "Lägg till bild", f, :assets %>
 
-</div>             
+</div>
+<br />
+<% @article.assets.each do |asset| %>
+<%= image_tag asset.image.url(:thumb)%>
+  
+<%end%>
                 
 <div class="form-actions">
   <%= f.submit :submit %>

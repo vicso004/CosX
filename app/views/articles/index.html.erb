@@ -1,25 +1,32 @@
 <h1>Album</h1>
 
-<table>
+<table class="table table-striped">
+  <thead>
   <tr>
     <th>Titel</th>
     <th>Innehåll</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>&nbsp</th>
+    <th>Val</th>
   </tr>
+</thead>
+<tbody>
 
 <% @articles.each do |article| %>
   <tr>
     <td><%= article.title %></td>
     <td><%= article.content %></td>
-    <td><%= link_to 'Visa', article %></td>
-    <td><%= link_to 'Editera', edit_article_path(article) %></td>
-    <td><%= link_to 'Ta bort', article, confirm: 'Är du säker?', method: :delete %></td>
+    <td>
+    <%= link_to (image_tag article.assets.first.image.url(:small)), article%></td>
+    <td><%= link_to 'Visa', article, :class => "btn btn-mini" %>
+        <% if can? :manage, article %>
+    <%= link_to 'Editera', edit_article_path(article), :class => "btn btn-mini" %>
+    <%= link_to 'Ta bort', article, confirm: 'Är du säker?', method: :delete, :class => "btn btn-mini btn-danger" %></td>
+    <% end %>
   </tr>
 <% end %>
+</tbody>
 </table>
 
 <br />
 
-<%= link_to 'Nytt album', new_article_path, :class => 'btn-primary'  %>
+<%= link_to 'Nytt album', new_article_path, :class => 'btn btn-primary'  %>
