@@ -15,7 +15,14 @@
   <%= f.input :tid, :input_html=>{:class => 'input-time'} %>
   <%= f.input :other_team %>
   <%= f.input :score_other %>
-  <%= f.collection_select :season, @seasons, :id, :full_name %>
+  <%= f.collection_select :season, @seasons, :id, :full_name, :label => "Säsong" %>
+  
+  <h2>Mål</h2>
+   <%= f.fields_for :goals do |builder| %>
+          <%= render 'goal_fields', f: builder %>        
+       <% end %>
+  <%= link_to_add_fields "Lägg till mål", f, :goals %>
+  
   <div class="form-actions">
     <%= f.submit "Skapa", :class => 'btn-primary' %>
     <%= link_to "Avbryt", matches_path, :class => 'btn' %>
