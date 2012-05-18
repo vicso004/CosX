@@ -1,11 +1,12 @@
-<%= simple_form_for(@season) do |f| %>
+<br />
+<%= simple_form_for @season, :html => { :class => 'form-horizontal' } do |f| %>
+
+    <%= f.input :year, :label => "År", :collection => 2011..2020 %><br />
 
     <%= f.input :period, :collection => ["VT", "HT"] %><br />
 
-    <%= f.input :year, :collection => 2011..2020 %><br />
-
     <div class="form-actions">
-      <%= f.button :submit, :class => 'btn-primary' %>
+      <%= f.submit "Skapa", :class => 'btn-primary' %>
       <%= link_to "Avbryt",
                 seasons_path, :class => 'btn' %>
     </div>

@@ -1,26 +1,31 @@
-<h1>Listing match_assignments</h1>
-
-<table>
+<h1>Matchvy</h1>
+<table class="table">
+  <thead>
   <tr>
-    <th>Player</th>
     <th>Match</th>
-    <th>Confirmed</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Spelare</th>
+    <th>Bekräftad</th>
+    <th>Val</th>
   </tr>
-
-<% @match_assignments.each do |match_assignment| %>
+</thead>
+<tbody>
+<% @matches.each do |match| %>
+<tr><td colspan=4 style="background-color:#eee;"><%= match.name%></td></tr>
+<% match.match_assignments.each do |assignment| %>
   <tr>
-    <td><%= match_assignment.player_id %></td>
-    <td><%= match_assignment.match_id %></td>
-    <td><%= match_assignment.confirmed %></td>
-    <td><%= link_to 'Show', match_assignment %></td>
-    <td><%= link_to 'Edit', edit_match_assignment_path(match_assignment) %></td>
-    <td><%= link_to 'Destroy', match_assignment, confirm: 'Are you sure?', method: :delete %></td>
+    <td>&nbsp</td>
+    <td><%= assignment.player.name %></td>
+    <td><%= assignment.is_confirmed %></td>
+    <td><%= link_to 'Kommer', match_assignment_path(assignment)+"/confirm", :metod => :put, :action => :confirm, :class=>"btn btn-mini"%>   
+    <%= link_to 'Kommer inte', match_assignment_path(assignment)+"/deny", :metod => :put, :action => :deny, :class=>"btn btn-mini"%>
+    
+    
+    
   </tr>
 <% end %>
+<t>
+<% end %>
+</tbody>
 </table>
 <br />
 
-<%= link_to 'New Match assignment', new_match_assignment_path %>

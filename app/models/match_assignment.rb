@@ -3,5 +3,13 @@ class MatchAssignment < ActiveRecord::Base
   belongs_to :player, :class_name => "Player", :foreign_key => "player_id"
 #  belongs_to :match
 #  belongs_to :player
-  
+  def is_confirmed
+    if self.confirmed 
+      "Ja"
+    elsif self.confirmed == nil
+      "Inte svarat"
+    else
+      "Nej"
+    end
+  end
 end

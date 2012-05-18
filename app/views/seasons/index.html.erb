@@ -1,22 +1,23 @@
 <h1>Säsonger</h1>
 
-<table>
+<table class="table table-striped">
+  <thead>
   <tr>
-    <th>Period</th>
     <th>År</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Period</th>
+    <th>Val</th>
   </tr>
-
+</thead>
+<tbody>
 <% @seasons.each do |season| %>
   <tr>
-    <td><%= season.period %></td>
     <td><%= season.year %></td>
-    <td><%= link_to 'Editera', edit_season_path(season), :class => 'btn btn-mini' %></td>
-    <td><%= link_to 'Ta bort', season, confirm: 'Är du säker?', method: :delete,:class => 'btn btn-mini btn-danger' %></td>
+    <td><%= season.period %></td>
+    <td><%= link_to 'Uppdatera', edit_season_path(season), :class => 'btn btn-mini' %>
+    <%= link_to 'Ta bort', season, confirm: 'Är du säker?', method: :delete,:class => 'btn btn-mini btn-danger' %></td>
   </tr>
 <% end %>
+</tbody>
 </table>
 
 <br />
