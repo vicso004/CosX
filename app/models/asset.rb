@@ -1,5 +1,5 @@
 class Asset < ActiveRecord::Base          
-  
+  #attr_accessible :image_file_name
   belongs_to :article
   has_attached_file :image,
       :styles => {

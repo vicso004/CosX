@@ -29,7 +29,6 @@ class ArticlesController < ApplicationController
   # GET /articles/new.json
   def new
     @article = Article.new()
-         2.times { @article.assets.build }
 
     respond_to do |format|
       format.html # new.html.erb
@@ -39,15 +38,15 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
-    @article = Article.find(params[:id])   
-          2.times { @article.assets.build }
+    @article = Article.find(params[:id])
+
   end
 
   # POST /articles
   # POST /articles.json
   def create
     @article = Article.new(params[:article])
-
+    
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Album skapades' }

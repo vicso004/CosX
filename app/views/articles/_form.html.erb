@@ -7,30 +7,15 @@
     <%= f.text_area :content %>
   </div>
 
-<div class="newPaperclipFiles">
+<div class="form-inputs">
 
-        <%= f.fields_for :assets do |asset| %>
-        
-           <% if asset.object.new_record? %>
-                 <%= asset.file_field :image %>     
-
-           <% end %>
-                            	
+        <%= f.fields_for :assets do |builder| %>
+          <%= render 'asset_fields', f: builder %>        
        <% end %>
+      <%= link_to_add_fields "Lägg till bild", f, :assets %>
 
 </div>             
                 
-<div class="existingPaperclipFiles">     
-     <% @article.assets.each do |asset| %> 
-          <% unless asset.new_record? %>
-                <div class="thumbnail">
-                        <%= link_to( image_tag(asset.image.url(:thumb)), asset.image.url(:large) ) %>
-                        <%#= asset.check_box :_delete %>
-                </div>    
-          <% end %>             
-     <% end %>
-</div>
-
 <div class="form-actions">
   <%= f.submit :submit %>
 </div>
