@@ -15,7 +15,7 @@
   <%= f.input :tid, :input_html=>{:class => 'input-time'} %>
   <%= f.input :other_team %>
   <%= f.input :score_other %>
-  <%= f.collection_select :season, @seasons, :id, :full_name, :label => "Säsong" %>
+  <%= f.input :season_id, :collection => @seasons %>
   
   <h2>Mål</h2>
    <%= f.fields_for :goals do |builder| %>

@@ -44,7 +44,6 @@ class MatchesController < ApplicationController
   # POST /matches
   # POST /matches.json
   def create
-    params[:match][:season] = Season.find(params[:match][:season])
     @match = Match.new(params[:match])
 
     respond_to do |format|
@@ -62,12 +61,6 @@ class MatchesController < ApplicationController
   # PUT /matches/1.json
   def update
     @match = Match.find(params[:id])
-    
-#    season = params[:match][:season].split
-    #season = season.split
-    params[:match][:season] = Season.find(params[:match][:season])
-
-    
     respond_to do |format|
       if @match.update_attributes(params[:match])
         format.html { redirect_to matches_path, notice: 'Match uppdaterades' }
@@ -93,17 +86,14 @@ class MatchesController < ApplicationController
   
   def send_mail
     
-    
     @match = Match.find(params[:id])
-    
     @match.players.each do |player|
       assignment = MatchAssignment.where(:player_id => player.id, :match_id => @match.id).first
-      MatchMailer.assignment_notification(player, @match, assignment).deliver
+      MatchMailer.assignment_notification(assignment).deliver unless assignment.player.user == nil
     end  
     respond_to do |format|
       format.html { redirect_to matches_url, :notice => "Mail har skickats" }      
     end
-    #alert "Mail har skickats ut"
     
   end
 end

@@ -1,10 +1,6 @@
 class Match < ActiveRecord::Base
   
-  # attr_accessible :title, :content, :assets_attributes
-  attr_accessible :datum, :player_ids, :tid, :other_team, :score_other, :season, :goals_attributes
-
-  
-  belongs_to :season
+  belongs_to :season, :foreign_key => "season_id"
   has_many :goals #many goals in a match
   has_many :players, :through => :match_assignments#, :source => :player_id
   has_many :match_assignments , :dependent => :destroy

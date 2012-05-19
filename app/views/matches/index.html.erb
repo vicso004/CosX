@@ -19,15 +19,13 @@
         <td><%= match.datum %></td>
         <td><%= match.other_team %></td>
         <td><%= result(match) %></td>
-        <td><%= match.season.full_name %></td>
+        <td><%= match.season.name %></td>
         <td><%= link_to 'Visa',
                       match_path(match), :class => 'btn btn-mini' %>
         <%if can? :manage, match %>
         <td>
           <%= link_to 'Uppdatera',
                       edit_match_path(match), :class => 'btn btn-mini' %>
-          <%= link_to "Lägg till mål",
-                      new_match_goal_path(match), :class => 'btn btn-mini' %>                      
                     <%= link_to 'Skicka mail',
                       mail_path(match),
                       :action => :send_mail,

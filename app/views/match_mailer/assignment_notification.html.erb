@@ -1,9 +1,9 @@
-<p>Hej <%= @player.name.split.first%>!</p>
+<p>Hej <%= @assignment.player.name.split.first%>!</p>
 
-<p>Nu är det dags igen för match, denna gång mot <%= @match.other_team%>.</p> 
+<p>Nu är det dags igen för match, denna gång mot <%= @assignment.match.other_team%>.</p> 
 <p>Det uttagna laget är :</p> 
 <ul>
-<% @match.players.each do |player| %>
+<% @assignment.match.players.each do |player| %>
 <li><%= link_to player.name, player_url(player) %></li>
 <%end%>
 </ul>
