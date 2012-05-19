@@ -1,7 +1,7 @@
 <fieldset class="goal_field">
   <%= f.input :goaler_id, :collection => @match.players %>
   <%= f.input :assister_id, :collection => @match.players %>
-  
   <%= f.hidden_field :_destroy %>
-  <%= link_to "Ta bort", "#", class: "remove_fields btn btn-mini btn-danger"%>
+ <%= link_to "Ta bort", "#", class: "remove_fields btn btn-mini btn-danger"%> 
+
 </fieldset>    
