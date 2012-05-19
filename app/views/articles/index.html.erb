@@ -19,7 +19,7 @@
     <%= link_to (image_tag article.assets.first.image.url(:small)), article%></td>
     <td><%= link_to 'Visa', article, :class => "btn btn-mini" %>
         <% if can? :manage, article %>
-    <%= link_to 'Editera', edit_article_path(article), :class => "btn btn-mini" %>
+    <%= link_to 'Uppdatera', edit_article_path(article), :class => "btn btn-mini" %>
     <%= link_to 'Ta bort', article, confirm: 'Är du säker?', method: :delete, :class => "btn btn-mini btn-danger" %></td>
     <% end %>
   </tr>

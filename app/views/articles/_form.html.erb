@@ -1,9 +1,10 @@
 <%= form_for @article, :html => {:multipart => true} do |f| %>
 
  <div class="form-inputs">
-    <%= f.label :title, 'Title' %> 
+    <%= f.label :title, 'Titel' %> 
     <%= f.text_field :title, :class => 'textfield' %>   
 <br/>
+	<%= f.label :content, 'Beskrivning' %>   
     <%= f.text_area :content %>
   </div>
 
@@ -23,7 +24,11 @@
 <%end%>
                 
 <div class="form-actions">
-  <%= f.submit :submit %>
-</div>
+    <%= f.submit "Skapa", :class => 'btn btn-primary' %>     
+  		<%= link_to "Avbryt",
+                articles_path, :class => 'btn' %>
+</div>                 
+
+
 
 <% end %> 
