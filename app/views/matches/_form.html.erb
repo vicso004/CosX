@@ -7,9 +7,9 @@
   </div>
 
   
-      <div class="field">      
+      <div class="controll-group string">      
 	
-  <%= f.label :player_ids, "Spelare" %><br />
+  <%= f.label :player_ids, "Spelare", :style => "width: 140px;" %>
   <%= f.collection_select :player_ids, Player.order(:name).where(:active => true), :id, :name, {}, {multiple: true} %>
 </div>
 
