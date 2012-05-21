@@ -7,15 +7,16 @@
   </div>
 
   
-      <div class="field">
+      <div class="field">      
+	
   <%= f.label :player_ids, "Spelare" %><br />
   <%= f.collection_select :player_ids, Player.order(:name).where(:active => true), :id, :name, {}, {multiple: true} %>
 </div>
 
   <%= f.input :tid, :input_html=>{:class => 'input-time'} %>
-  <%= f.input :other_team %>
-  <%= f.input :score_other %>
-  <%= f.input :season_id, :collection => @seasons %>
+  <%= f.input :other_team, :label => "Motståndarlag" %>
+  <%= f.input :score_other, :label => "Motståndarlagets mål"  %>
+  <%= f.input :season_id, :collection => @seasons, :label => "Säsong" %>
   
   <h2>Mål</h2>
    <%= f.fields_for :goals do |builder| %>
