@@ -79,7 +79,7 @@ class MatchesController < ApplicationController
     @match.destroy
 
     respond_to do |format|
-      format.html { redirect_to matches_url }
+      format.html { redirect_to matches_url, notice: "Matchen togs bort"}
       format.json { head :ok }
     end
   end
