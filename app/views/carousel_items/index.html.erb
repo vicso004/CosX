@@ -18,10 +18,9 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>bild</th>
-      <th><%= model_class.human_attribute_name(:active) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th>Bild</th>
+      <th>Visas</th>
+      <th>Val</th>
     </tr>
   </thead>
   <tbody>
@@ -33,9 +32,8 @@
                       :action => :switch,
                       :method => :put,
                       :class =>  switcher_style(carousel_item) %></td>
-        <td><%=l carousel_item.created_at %></td>
         <td>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+          <%= link_to "Ta bort",
                       carousel_item_path(carousel_item),
                       :method => :delete,
                       :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
@@ -46,6 +44,6 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
+<%= link_to "Ny bild",
             new_carousel_item_path,
             :class => 'btn btn-primary' %>
