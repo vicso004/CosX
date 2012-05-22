@@ -19,7 +19,7 @@ class Ability
       can :read, Player
       can :read, Article
       can :read, Match
-      can :manage, User
+      #can :manage, User
     
     #Guest  
     #elsif
