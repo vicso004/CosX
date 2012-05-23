@@ -7,6 +7,7 @@
       <th>Namn</th>
       <th><%= model_class.human_attribute_name(:position) %></th>
       <th>Aktiv</th>
+      <th>Spelade matcher</th>
       <th>Mål</th>
       <th>Assist</th>
       <% if can? :manage, @players%>
@@ -23,6 +24,7 @@
         <td><%= player.name %></td>
         <td><%= player.position %></td>
         <td><%= player.active ? "Ja" : "Nej" %></td>
+        <td><%= player.matches.length%></td>
         <td><%= player.made_goals %></td>
         <td><%= player.made_assists %></td>
         <% if can? :manage, player %>
