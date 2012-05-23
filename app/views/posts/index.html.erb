@@ -1,3 +1,5 @@
+	<div id="posts"> 
+
 <!-- carousel -->
 	<div id="myCarousel" class="carousel">
 		<div class="carousel-inner">          
@@ -19,7 +21,7 @@
 <!-- Posts -->
 	<%- model_class = Post.new.class -%>
 
-	<div id="posts">     
+  
   <%= link_to "Ny post",
 	             new_post_path,
 	            :class => 'btn btn-primary' if can? :manage, @posts%> 
