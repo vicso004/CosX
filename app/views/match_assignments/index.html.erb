@@ -10,8 +10,9 @@
 </thead>
 <tbody>
 <% @matches.each do |match| %>
-<tr style="background-color:#eee;"><td colspan=4><%= match.name%> <%= link_to 'Uppdatera match',
-                      edit_match_path(match), :class => 'btn btn-mini' %></td></tr>
+<tr style="background-color:#eee;"><td colspan=2><%= match.name%> <%= link_to 'Uppdatera match',
+                      edit_match_path(match), :class => 'btn btn-mini' %></td>
+<td colspan=2><b><%= match.match_assignments.where(:confirmed => true).length%>/<%= match.match_assignments.length%> </b></td></tr>
 <% match.match_assignments.each do |assignment| %>
   <tr>
     <td>&nbsp</td>

@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
+  <b>Titel</b>
   <%= @article.title %>
 </p>
 
 <p>
-  <b>Content:</b>
+  <b>Innehåll</b>
   <%= @article.content %>
 </p>
 
@@ -19,6 +19,6 @@ Klicka på bilderna för att starta bildvisning
 </p>              
 
  <p>  
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<%= link_to 'Uppdatera', edit_article_path(@article), class: "btn btn-mini" %> |
+<%= link_to 'Tillbaka', articles_path, class: "btn btn-mini" %>
 </p>  

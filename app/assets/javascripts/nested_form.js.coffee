@@ -6,6 +6,6 @@ jQuery ->
     
   $('form').on 'click', '.add_fields', (event) -> #when user click add fields link
     time = new Date().getTime() #make a new unique id useing current tim
-    regexp = new RegExp($(this).data('id'), 'g') #test ig string contains 
+    regexp = new RegExp($(this).data('id'), 'g') #test if string contains 
     $(this).before($(this).data('fields').replace(regexp, time))
     event.preventDefault()  # do not reload page when click link

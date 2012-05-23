@@ -6,7 +6,7 @@ class Match < ActiveRecord::Base
   has_many :match_assignments , :dependent => :destroy
   
   validates_presence_of :other_team, :message => "Fyll i match"   
-  validates_numericality_of :score_other, :only_integer =>true, :greater_than_or_equal_to =>0, :message => "Antalet kan inte vara negativt"    
+#  validates_numericality_of :score_other, :only_integer =>true, :greater_than_or_equal_to =>0, :message => "Antalet kan inte vara negativt"    
   
   accepts_nested_attributes_for :goals, :allow_destroy => true
   
