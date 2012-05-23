@@ -1,6 +1,6 @@
 <% @posts.each do |post| %>
   <h2><%= post.title %></h2>
-  <i>Skrivet <%= post.created_at.strftime("%B %e, %Y")%></i>
+  <i>Skrivet <%= post.created_at.strftime("%e/%m, %Y")%></i>
   <p><%= post.body%></p>
   <% if can? :manage, post %>
   <p>
