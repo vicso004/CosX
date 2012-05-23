@@ -28,11 +28,7 @@
 			            <li><%= link_to "Matcher", matches_path %></li>
     
 			  			<li><%= link_to "Album", articles_path %></li>
-						<!--<li><%= link_to "Resultat",  %></li>-->
 			          </ul>
-					<!-- <form class="navbar-search pull-left">
-					  <input type="text" class="search-query" placeholder="Search">
-					</form> --!>
           
           <% if current_user && current_user.admin == "t" %>
           <ul class="nav pull-right">
@@ -52,10 +48,8 @@
 					    </a>
 					    <ul class="dropdown-menu">
 					      	<% if current_user  %>
-						
-							    <%= image_tag current_user.avatar_url, :alt =>"avatar" %>
+		          <li style="margin-left: 5px;">Välkommen <%= current_user.player.name.split.first %></li>		
 							<li class="divider"></li>
-              
 							 	<li><%= link_to "Logga ut", destroy_user_session_path, :method => :delete%></li>
 							  <% else %>
 							   <li> <%= link_to "Logga in", user_omniauth_authorize_path(:facebook) %></li>
