@@ -13,7 +13,6 @@ gem 'devise'
 gem 'will_paginate'
 gem 'simple_form'
 
-gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 # Gems used only for assets and not required
 # in production environments by default.

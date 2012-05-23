@@ -1,6 +1,6 @@
 CosX::Application.routes.draw do
   
-  #Icke REST länkar
+  #Icke RESTful länkar
   match 'carousel_items/:id/switch' => 'carousel_items#switch'
   match 'matches/:id/send_mail' => 'matches#send_mail'
   match 'match_assignments/:id/confirm' => 'match_assignments#confirm'  
@@ -21,7 +21,7 @@ CosX::Application.routes.draw do
 
   resources :players
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" } 
 
   resources :posts                 
 
