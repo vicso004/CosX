@@ -1,5 +1,6 @@
 class CarouselItemsController < ApplicationController
-
+  
+  # Initierar rättighetskontroll 
   authorize_resource
   
   # GET /carousel_items
@@ -7,7 +8,7 @@ class CarouselItemsController < ApplicationController
   def index
     @carousel_items = CarouselItem.all
     @items = CarouselItem.where(:active => true)
-    #@items = Asset.all
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @carousel_items }
@@ -84,7 +85,8 @@ class CarouselItemsController < ApplicationController
       format.json { head :ok }
     end
   end
-
+   
+  # Möjliiggör aktiviering/avaktivering av bildspelsobjekt 
   def switch
     @carousel_item = CarouselItem.find(params[:id])
 

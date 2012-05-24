@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 class MatchAssignmentsController < ApplicationController
   
+  # Initierar rättighetskontroll 
   authorize_resource
   
   # GET /match_assignments
   # GET /match_assignments.json
   def index
-    #@match_assignments = MatchAssignment.order(:match_id)
+    #Visa endast de kommande matcherna
     @matches = Match.where("datum >= ?",Date.today).order(:datum)
 
     respond_to do |format|
@@ -15,7 +16,8 @@ class MatchAssignmentsController < ApplicationController
     end
   end
 
-  
+  #Metod för att bekräfta att spelaren kommer på match
+  #Spelare skickas vidare till startsidan medan admin kommer till index
   def confirm
     @match_assignment = MatchAssignment.find(params[:id])
     @match_assignment.confirmed = true
@@ -32,6 +34,8 @@ class MatchAssignmentsController < ApplicationController
     end
   end
   
+  #Metod för att medela att spelaren inte kommer på matchen
+  #Spelare skickas vidare till startsidan medan admin kommer till index
   def deny
     @match_assignment = MatchAssignment.find(params[:id])
     @match_assignment.confirmed = false

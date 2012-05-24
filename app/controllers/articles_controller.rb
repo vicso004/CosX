@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
-
+  
+  # Initierar rättighetskontroll 
   authorize_resource
   
   # GET /articles

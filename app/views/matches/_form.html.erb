@@ -1,6 +1,5 @@
 <%= simple_form_for @match, :html => { :class => 'form-horizontal' } do |f| %>
-<div class="controll-group string" style="margin-bottom:10px;">
-    
+<div class="controll-group string" style="margin-bottom:10px;">    
 
   <%= f.label :datum %>
   <%= f.text_field :datum %>
@@ -10,7 +9,7 @@
       <div class="controll-group string">      
 	
   <%= f.label :player_ids, "Spelare", :style => "width: 140px;" %>
-  <%= f.collection_select :player_ids, Player.order(:name).where(:active => true), :id, :name, {}, {multiple: true} %>
+  <%= f.collection_select :player_ids, @players, :id, :name, {}, {multiple: true} %>
 </div>
 
   <%= f.input :tid, :input_html=>{:class => 'input-time'} %>

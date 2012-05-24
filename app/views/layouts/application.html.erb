@@ -5,13 +5,12 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css", "application" %>
-  <%#= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application" %>
   <%= csrf_meta_tags %>
   
 
 </head>
 <body>
-	
+	<!-- Navigation -->
 	<div class="navbar">
 	  <div class="navbar-inner">
 	    <div class="container">
@@ -68,7 +67,6 @@
 	<div class="container-fluid">
 	  <div class="row-fluid">
 	    <div class="span8">
-	      <!--body content-->
 	      	<!-- flash messages -->		
   <% flash.each do |name, msg| %>
     <div class="alert alert-<%= name == :notice ? "success" : "error" %> fade in">
@@ -77,9 +75,10 @@
     </div>
     
   <% end %>
-<!-- Controller content -->
+	      <!--body content-->  
 	<%= yield %>
 	    </div>
+	<!-- Högerpanel -->
 	    <div class="span4">        
 	<h3>Stöd CosX!</h3> 
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">

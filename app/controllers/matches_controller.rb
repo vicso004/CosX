@@ -1,5 +1,5 @@
 class MatchesController < ApplicationController
-  
+  # Initierar rättighetskontroll 
   authorize_resource
   
   # GET /matches
@@ -29,6 +29,8 @@ class MatchesController < ApplicationController
   def new
     @match = Match.new
     @seasons = Season.all
+    #endast aktiva spelare kan tilldelas
+    @players = Player.order(:name).where(:active => true)
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @match }
@@ -38,7 +40,9 @@ class MatchesController < ApplicationController
   # GET /matches/1/edit
   def edit
     @match = Match.find(params[:id])
-        @seasons = Season.all
+    @seasons = Season.all    
+    #endast aktiva spelare kan tilldelas
+    @players = Player.order(:name).where(:active => true)
   end
 
   # POST /matches
@@ -84,6 +88,7 @@ class MatchesController < ApplicationController
     end
   end
   
+  #Metod för att skicka mail till en matchs uttagna spelare (som det finns mailadress till)
   def send_mail
     
     @match = Match.find(params[:id])

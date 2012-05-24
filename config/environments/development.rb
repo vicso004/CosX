@@ -23,11 +23,10 @@ CosX::Application.configure do
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
-#    domain: "railscasts.com",
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: "cosxinnebandy@gmail.com",
-    password: "sav56eko"
+    password: "QAZxsw123"
   }
   
   # Specify what domain to use for mailer URLs
