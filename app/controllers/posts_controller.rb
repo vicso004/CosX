@@ -9,7 +9,11 @@ class PostsController < ApplicationController
     #@posts = Post.find(:all, :order =>"Created_at DESC", :limit => 2)
     #@posts = Post.find(:all, :order =>"Created_at DESC").page(params[:page]).per_page(5)
     @posts = Post.paginate(:page => params[:page]).order('id DESC').per_page(4)      
-    @items = CarouselItem.where(:active => true) 
+    @items = CarouselItem.where(:active => true)
+    respond_to do |format|
+       format.html
+       format.xml { render xml: Post.all}
+    end 
     
   end
 
