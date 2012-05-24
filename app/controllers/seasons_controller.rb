@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-class SeasonsController < ApplicationController
+class SeasonsController < ApplicationController         
+  # Initierar rättighetskontroll 
   authorize_resource
   # GET /seasons
   # GET /seasons.json

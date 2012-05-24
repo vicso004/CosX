@@ -1,4 +1,5 @@
 class PlayersController < ApplicationController
+  # Initierar rättighetskontroll 
   authorize_resource
   # GET /players
   # GET /players.json

@@ -7,7 +7,7 @@
 <li><%= link_to player.name, player_url(player) %></li>
 <%end%>
 </ul>
-<p>Konfirmera att du kommer genom att klicka på
+<p>Bekräfta att du kommer genom att klicka på
   <%= link_to 'denna länk', match_assignments_url+"/"+@assignment.id.to_s+"/confirm", :metod => :put, :action => :confirm%></p>
   <p>Om du inte kan komma komma så klickar du <%= link_to 'här', match_assignments_url+"/"+@assignment.id.to_s+"/deny", :metod => :put, :action => :deny%></p>
   

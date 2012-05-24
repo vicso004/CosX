@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 class PostsController < ApplicationController
   
+  # Initierar rättighetskontroll 
   authorize_resource  
   # GET /posts
   # GET /posts.json
@@ -16,8 +17,6 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
-
-
   end
 
   # GET /posts/new

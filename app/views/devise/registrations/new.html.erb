@@ -11,10 +11,10 @@
 
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
-  
+  <% if can? :manage, User %>
   <div><%= f.label :admin %><br />
   <%= f.check_box :admin %></div>
-  
+  <% end %>
   <div><%= f.submit "Sign up" %></div>
 <% end %>
 

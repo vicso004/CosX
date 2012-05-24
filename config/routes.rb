@@ -1,9 +1,12 @@
 CosX::Application.routes.draw do
   
+  #Icke RESTful länkar
   match 'carousel_items/:id/switch' => 'carousel_items#switch'
   match 'matches/:id/send_mail' => 'matches#send_mail'
   match 'match_assignments/:id/confirm' => 'match_assignments#confirm'  
   match 'match_assignments/:id/deny' => 'match_assignments#deny'  
+  
+  
   resources :match_assignments
 
   resources :articles
@@ -12,19 +15,13 @@ CosX::Application.routes.draw do
 
   resources :seasons
 
-  resources :goals
-
-  resources :matches do
-    resources :goals
-  end
+  resources :matches
   
   resources :matches_players
 
-  devise_for :admins
-
   resources :players
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" } 
 
   resources :posts                 
 
