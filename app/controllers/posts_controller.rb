@@ -11,7 +11,8 @@ class PostsController < ApplicationController
     @posts = Post.paginate(:page => params[:page]).order('id DESC').per_page(4)      
     @items = CarouselItem.where(:active => true)
     respond_to do |format|
-       format.html
+       format.html    
+       format.js
        format.xml { render xml: Post.all}
     end 
     
