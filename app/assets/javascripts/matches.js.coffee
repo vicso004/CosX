@@ -9,8 +9,8 @@ jQuery ->
   monthNames: ['Januari','Februari','Mars','April','Maj','Juni',
 			'Juli','Augusti','September','Oktober','November','December'],
   dayNamesMin: ['Sö','Må','Ti','On','To','Fr','Lö']
-#  prevText: '<<',
-#  nextText: '>>'
+  prevText: ' ',
+  nextText: ' '
   });
   
 #Chosen  
