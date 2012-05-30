@@ -1,7 +1,8 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
-gem 'sqlite3'
+#gem 'sqlite3'
+gem 'pg'
 gem 'rails3-generators' 
 gem 'jquery-rails'   
 
@@ -35,7 +36,8 @@ group :development, :test do
   gem 'debugger'
 end
 
+
 # Deploy with Capistrano
-# gem 'capistrano'
+  gem 'capistrano'
 
 
