@@ -29,7 +29,7 @@ class User < ActiveRecord::Base
     # Annars, skapa användare och lösenord 
     else  
       self.create!(:email => data.email, :password => Devise.friendly_token[0,20])
-      self.admin = false
+      #self.admin = false
     end
   end
   
