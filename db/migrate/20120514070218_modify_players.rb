@@ -1,5 +1,6 @@
 class ModifyPlayers < ActiveRecord::Migration
   def change
-    change_column :players, :active, :boolean
+    remove_column :players, :active
+    add_column :players, :active, :boolean
   end
 end

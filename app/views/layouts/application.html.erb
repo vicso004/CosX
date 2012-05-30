@@ -29,7 +29,7 @@
 			  			<li><%= link_to "Album", articles_path %></li>
 			          </ul>
           
-          <% if current_user && current_user.admin == "t" %>
+          <% if current_user && current_user.admin? %>
           <ul class="nav pull-right">
           <li><%= link_to "Matchvy", match_assignments_path%>
             <li><%= link_to "Säsonger", seasons_path %></li> 

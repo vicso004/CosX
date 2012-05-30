@@ -8,11 +8,11 @@ class Ability
     can :read, Post
     
     #Admin
-     if user.admin == "t"
+     if user.admin?
        can :manage, :all
 
     #Logged in user  
-    elsif user.admin == "f"
+    elsif user.admin != nil
       
       can :read, Player
       can :read, Article

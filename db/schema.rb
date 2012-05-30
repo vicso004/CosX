@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20120514070218) do
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "carousel_items", :force => true do |t|
@@ -97,9 +98,9 @@ ActiveRecord::Schema.define(:version => 20120514070218) do
   create_table "players", :force => true do |t|
     t.string   "name"
     t.string   "position"
-    t.boolean  "active",     :limit => 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "active"
   end
 
   add_index "players", ["name"], :name => "index_players_on_name", :unique => true
@@ -118,7 +119,27 @@ ActiveRecord::Schema.define(:version => 20120514070218) do
     t.datetime "updated_at"
   end
 
-# Could not dump table "users" because of following StandardError
-#   Unknown type 'bolean' for column 'admin'
+  create_table "users", :force => true do |t|
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "password_salt"
+    t.string   "avatar_url"
+    t.integer  "player_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "admin"
+  end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["player_id"], :name => "index_users_on_player_id"
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
 end

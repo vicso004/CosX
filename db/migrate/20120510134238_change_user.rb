@@ -1,5 +1,5 @@
 class ChangeUser < ActiveRecord::Migration
   def change
-    add_column :users, :admin, :bolean
+    add_column :users, :admin, :boolean
   end
 end
